@@ -8,7 +8,8 @@ const openai = new OpenAIApi(new Configuration({
 }))
 
 const Input_1 = `
- Hhow would you go about fishing tell me a step by step guide.
+
+
 `;
 
 openai.createChatCompletion({
