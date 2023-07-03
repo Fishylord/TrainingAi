@@ -27,8 +27,16 @@ const chain = new LLMChain({ llm: model, prompt: prompt });
 
 try {
     const res = await chain.call({ product: "colorful socks" });
+
+    const inputTokens = model.getNumTokens();
+    const outputTokens = model.getNumTokens();
+    const totalTokens = inputTokens + outputTokens;
+
     console.log(res);
-    console.log(JSON.stringify(res, null, 2));
+    console.log(`Input tokens: ${inputTokens}`);
+    console.log(`Output tokens: ${outputTokens}`);
+    console.log(`Total tokens: ${totalTokens}`);
+    // console.log(JSON.stringify(res, null, 2));
 } catch (error) {
     console.error("Error:", error);
 }
