@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node script.js"
+    "dev": "node script.js",
+    "SSS": "node second.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "langchain": "^0.0.102",
+    "mysql2": "^3.4.3",
     "openai": "^3.3.0"
   }
 }

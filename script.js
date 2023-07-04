@@ -16,26 +16,24 @@ const model = new OpenAI({
     temperature: 0.9,
     modelName: "gpt-3.5-turbo-0613",
 });
-
-const template = "What is a good name for a company that makes {product}?";
-const prompt = new PromptTemplate({
-  template: template,
-  inputVariables: ["product"],
-});
-
-const chain = new LLMChain({ llm: model, prompt: prompt });
+console.log(process.env.OPENAI_API_KEY);
+const Input = ["What would be a good orange fruit?"];
 
 try {
-    const res = await chain.call({ product: "colorful socks" });
+    const res = await model.generate(Input);
 
-    const inputTokens = model.getNumTokens();
-    const outputTokens = model.getNumTokens();
-    const totalTokens = inputTokens + outputTokens;
 
     console.log(res);
-    console.log(`Input tokens: ${inputTokens}`);
-    console.log(`Output tokens: ${outputTokens}`);
-    console.log(`Total tokens: ${totalTokens}`);
+    console.log(JSON.stringify(res, null, 2));
+    const Tokens = model.getNumTokens("bruh");
+    console.log({ Tokens });
+    // const inputTokens = .getNumTokens
+    // const outputTokens = model.getNumTokens();
+    // const totalTokens = inputTokens + outputTokens;
+
+    // console.log(`Input tokens: ${inputTokens}`);
+    // console.log(`Output tokens: ${outputTokens}`);
+    // console.log(`Total tokens: ${totalTokens}`);
     // console.log(JSON.stringify(res, null, 2));
 } catch (error) {
     console.error("Error:", error);

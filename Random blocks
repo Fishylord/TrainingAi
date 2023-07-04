@@ -1,0 +1,20 @@
+// const template = "What is a good name for a company that makes {product}?";
+// const prompt = new PromptTemplate({
+//   template: template,
+//   inputVariables: ["product"],
+// });
+
+// const chain = new LLMChain({ llm: model, prompt: prompt });
+
+
+    // console.log(res.generations[0][0].llmOutput.tokenUsage);
+    // console.log(JSON.stringify(res, null, 2));
+
+    // const inputTokens = .getNumTokens
+    // const outputTokens = model.getNumTokens();
+    // const totalTokens = inputTokens + outputTokens;
+
+    // console.log(`Input tokens: ${inputTokens}`);
+    // console.log(`Output tokens: ${outputTokens}`);
+    // console.log(`Total tokens: ${totalTokens}`);
+    // console.log(JSON.stringify(res, null, 2));
