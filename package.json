@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "node script.js",
-    "SSS": "node second.js"
+    "SSS": "node second.js",
+    "agent": "node agent.js"
   },
   "keywords": [],
   "author": "",
