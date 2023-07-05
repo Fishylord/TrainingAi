@@ -7,6 +7,8 @@ import { createConnection } from "mysql2/promise";
 import { JSONLoader } from "langchain/document_loaders/fs/json";
 import * as fs from "fs";
 import { JsonSpec } from "langchain/tools";
+import { OpenAI } from "langchain/llms/openai";
+import { DocumentLoader } from "langchain/document_loaders";
 config()
 
 
@@ -19,30 +21,29 @@ const run = async () => {
       } catch (e) {
         console.error(e);
         return;
-      }
+    }
 
-    const chat = new PromptLayerChatOpenAI({
+    const loader = new DocumentLoader();
+    loader.load(Jdata);
+
+    //Model Loader
+    const chat = new OpenAI({
         openAIApiKey: process.env.OPENAI_API_KEY,
         temperature: 0.9,
         modelName: "gpt-3.5-turbo-0613",
-    });
-    
-    const template = `What insights can you provide about the data? 
-    You are a "Data Analysis" working as a assistant providing insights for your bosses and collogues for the daily workflow.
-    Provide Information like deadline, issues and updates on data if possible depending on the prompt. 
-    {{data}} 
-    `;
-    const prompt = new PromptTemplate({
-    template: template,
-    inputVariables: ["data"],
-    });
+    }); 
 
-    
-    console.log(Jdata);
-    // console.log(formattedPrompt);
-    const chain = new LLMChain({ llm: chat, prompt: prompt });
-    console.log(chain)
-    const response = await chain.call({ data: "say 123 if you see this" });
+    //Prompt creation
+    const prompt = PromptTemplate.fromTemplate(
+        "What insights can you provide about the data? You are a Data Analysis working as a assistant providing insights for your bosses and collogues for the daily workflow. Provide Information like deadline, issues and updates on data if possible depending on the prompt. please Tell me which projects have jobs within 10days of their deadline and have a high project value {{data}}"
+    );
+    console.log(prompt);
+
+    //Chain Craetion
+    const chain = new LLMChain({ llm: chat, prompt, DocumentLoader: loader });
+
+    //Processing to openAI
+    const response = await chain.call({ data: loader.getDocumentReference() });
 
     console.log(response);
     // const respA = await chat.generate([
