@@ -81,3 +81,12 @@
           2
         )}`
       );
+
+    let Jdata;
+    try {
+        const jsonData = await fs.promises.readFile("SampleData.JSON", "utf8");
+        Jdata = JSON.parse(jsonData);
+      } catch (e) {
+        console.error(e);
+        return;
+    }

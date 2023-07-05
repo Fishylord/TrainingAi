@@ -8,22 +8,14 @@ import { JSONLoader } from "langchain/document_loaders/fs/json";
 import * as fs from "fs";
 import { JsonSpec } from "langchain/tools";
 import { OpenAI } from "langchain/llms/openai";
-import { DocumentLoader } from "langchain/document_loaders";
+import { JSONLoader } from "langchain/document_loaders/fs/json";
 config()
 
 
 const run = async () => {
     // Load the JSON data
     let Jdata;
-    try {
-        const jsonData = await fs.promises.readFile("SampleData.JSON", "utf8");
-        Jdata = JSON.parse(jsonData);
-      } catch (e) {
-        console.error(e);
-        return;
-    }
-
-    const loader = new DocumentLoader();
+    const loader = new JSONLoader("C:\Users\User\Documents\Coding\Art\TrainingAi\SampleData.JSON");
     loader.load(Jdata);
 
     //Model Loader
@@ -40,10 +32,10 @@ const run = async () => {
     console.log(prompt);
 
     //Chain Craetion
-    const chain = new LLMChain({ llm: chat, prompt, DocumentLoader: loader });
+    const chain = new LLMChain({ llm: chat, prompt });
 
     //Processing to openAI
-    const response = await chain.call({ data: loader.getDocumentReference() });
+    const response = await chain.call({ data: loader });
 
     console.log(response);
     // const respA = await chat.generate([
