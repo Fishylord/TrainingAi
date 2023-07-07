@@ -43,7 +43,7 @@ const run = async () => {
     3. If a user ask something like "what is todays jobs closest to duedates to focus on" summarise the data and give the top 3-5 closest job due dates and its projects and which customer it belongs to.`;
     const tools = [
         new toolkit({
-            name: "Json Toolkit",
+            name: "toolkit",
             description: "A toolkit for working with JSON data",
             data: new JsonToolkit(jsonSpec),
         })

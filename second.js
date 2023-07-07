@@ -25,7 +25,7 @@ console.log(prompt);
 const respA = await chat.generate([
     [
     new SystemChatMessage(
-      
+      "what are you"
     ),
     ],
 ]);
