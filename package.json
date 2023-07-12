@@ -7,13 +7,15 @@
   "scripts": {
     "dev": "node script.js",
     "SSS": "node second.js",
-    "agent": "node agent.js"
+    "agent": "node agent.js",
+    "text": "node TextAI.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
+    "hnswlib-node": "^1.4.2",
     "langchain": "^0.0.102",
     "mysql2": "^3.4.3",
     "openai": "^3.3.0"

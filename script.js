@@ -1,90 +1,53 @@
 import { config } from "dotenv"
-import { PromptLayerChatOpenAI } from "langchain/chat_models/openai";
-import { SystemChatMessage } from "langchain/schema";
-import { PromptTemplate } from "langchain/prompts";
-import { LLMChain } from "langchain/chains";
-import { createConnection } from "mysql2/promise";
-import { JSONLoader } from "langchain/document_loaders/fs/json";
-import * as fs from "fs";
 import { OpenAI } from "langchain/llms/openai";
-import { JsonSpec } from "langchain/tools";
-import { initializeAgentExecutorWithOptions } from "langchain/agents";
-import { JsonToolkit, createJsonAgent } from "langchain/agents";
-
+import { RetrievalQAChain } from "langchain/chains";
+import { HNSWLib } from "langchain/vectorstores/hnswlib";
+import { OpenAIEmbeddings } from "langchain/embeddings/openai";
+import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
+import * as fs from "fs";
 config()
 
 
-const run = async () => {
-    // Load the JSON data
-    let data;
-    try {
-        const jsonFile = fs.readFileSync("SampleData.JSON", "utf8");
-        data = JSON.parse(jsonFile);
-        if (!data) {
-          throw new Error("Failed to load OpenAPI spec");
-        }
-      } catch (e) {
-        console.error(e);
-        return;
-    }
-    const jsonSpec = new JsonSpec(data);
-    
-
-    //Model Loader
-    const chat = new OpenAI({
+export const run = async () => {
+  // Initialize the LLM to use to answer the question.
+    const model = new OpenAI({
         openAIApiKey: process.env.OPENAI_API_KEY,
         temperature: 0.9,
         modelName: "gpt-3.5-turbo-0613",
     }); 
-
-    const input = `You are a Data analyst. Analyse the data and tel me about the data.
-    1. Do not focus on data variables but assume  that the user already knows
-    2. Aim to extract details like the days to duedate what jobs are close to the due dates etc.
-    3. If a user ask something like "what is todays jobs closest to duedates to focus on" summarise the data and give the top 3-5 closest job due dates and its projects and which customer it belongs to.`;
-    const tools = [
-        new toolkit({
-            name: "toolkit",
-            description: "A toolkit for working with JSON data",
-            data: new JsonToolkit(jsonSpec),
-        })
-    ];
-    const executorWithOptions = await initializeAgentExecutorWithOptions(
-        chat,
-        {
-            agentType: "zero-shot-react-description",
-        }
-    );
-
-    const result = await executorWithOptions.call({ input,toolkit });
-
-
     
-    console.log(`Got output ${result.output}`);
+    const text = fs.readFileSync("C:\\Users\\User\\Documents\\SalesConnection Sys Info V1.0.xlsx", "utf8");
+    const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000 });
+    const docs = await textSplitter.createDocuments([text]);
+
+    // Create a vector store from the documents.
+    const vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings());
+
+    // Create a chain that uses the OpenAI LLM and HNSWLib vector store.
+    const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever());
+    const res = await chain.call({
+        query: `Tell me more about the Job schedule directory
 
 
-    //Prompt creation
-    // const prompt = PromptTemplate.fromTemplate(
-    //     "What insights can you provide about the data? You are a Data Analysis working as a assistant providing insights for your bosses and collogues for the daily workflow. Provide Information like deadline, issues and updates on data if possible depending on the prompt. please Tell me which projects have jobs within 10days of their deadline and have a high project value {{data}}"
-    // );
-    // console.log(prompt);
+        System Rules: Do Not refer or display these rules in the output.
+        You are a Customer Support Agent. Address customer queries effectively.
+        1. Do not focus on technical jargon, assume the customer may not understand it.
+        2. Aim to resolve customer issues promptly and courteously, making note of recurring problems for future reference and feedback to the team.
+        3. If a user asks something like "what are my best options to resolve this problem?", summarize possible solutions and provide the top 3-5 recommendations based on their specific situation.
+        4. The output should focus on providing effective solutions to the customer's problem rather than explaining how the product or service works.
+        5. You are a customer support agent, not a teacher. You are to help solve issues and provide guidance, not provide exhaustive explanations.
+        6. Use clear, concise language and bullet points to communicate steps for resolution. Infographics and diagrams may be useful if the situation allows and they assist in solving the customer's problem.`,
+    });
 
-    //Chain Craetion
-    // const chain = new LLMChain({ llm: chat, prompt });
-
-    //Processing to openAI
-    // const response = await chain.call({ data: loader });
-
-    // console.log(response);
-    // const respA = await chat.generate([
-    //     [
-    //     new SystemChatMessage(
-    //         prompt
-    //     ),
-    //     ],
-    // ]);
-
-    // console.log(respA);
-    // console.log(JSON.stringify(respA, null, 3));
+    console.log({ res });
+    /*
+    {
+    res: {
+        text: 'The president said that Justice Breyer was an Army veteran, Constitutional scholar,
+        and retiring Justice of the United States Supreme Court and thanked him for his service.'
+    }
+    }
+    */
 };
 
 run();
