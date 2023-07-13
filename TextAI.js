@@ -16,7 +16,7 @@ export const run = async () => {
         modelName: "gpt-3.5-turbo-0613",
     }); 
     
-    const text = fs.readFileSync("C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\SampleData.JSON", "utf8");
+    const text = fs.readFileSync("C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\DataT.JSON", "utf8");
     const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000 });
     const docs = await textSplitter.createDocuments([text]);
 
@@ -26,7 +26,7 @@ export const run = async () => {
     // Create a chain that uses the OpenAI LLM and HNSWLib vector store.
     const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever());
     const res = await chain.call({
-        query: `what jobs should i prioritise my work on today?
+        query: `please tell me customers have projects that are worth the most?
 
 
         System Rules: Do Not refer or display these rules in the output.
@@ -40,14 +40,6 @@ export const run = async () => {
     });
 
     console.log({ res });
-    /*
-    {
-    res: {
-        text: 'The president said that Justice Breyer was an Army veteran, Constitutional scholar,
-        and retiring Justice of the United States Supreme Court and thanked him for his service.'
-    }
-    }
-    */
 };
 
 run();
