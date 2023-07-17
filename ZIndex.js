@@ -5,6 +5,16 @@ import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { PineconeStore } from "langchain/vectorstores/pinecone";
 config();
 
+// Specify the OpenAI model
+const model = "gpt-3.5-turbo";
+const embeddings = new OpenAIEmbeddings({
+  
+
+});
+
+// Set the OpenAI API key
+process.env.OPENAI_API_KEY = "YOUR_OPENAI_API_KEY";
+
 const client = new PineconeClient();
 await client.init({
   apiKey: process.env.PINECONE_API_KEY,

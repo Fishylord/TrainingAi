@@ -8,16 +8,20 @@
     "dev": "node script.js",
     "SSS": "node second.js",
     "agent": "node agent.js",
-    "text": "node TextAI.js"
+    "text": "node TextAI.js",
+    "test": "node Test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "docxtemplater": "^3.37.12",
     "dotenv": "^16.3.1",
     "hnswlib-node": "^1.4.2",
+    "jszip": "^3.10.1",
     "langchain": "^0.0.102",
     "mysql2": "^3.4.3",
-    "openai": "^3.3.0"
+    "openai": "^3.3.0",
+    "pizzip": "^3.1.4"
   }
 }
