@@ -33,7 +33,7 @@ export const run = async () => {
     // Create a chain that uses the OpenAI LLM and HNSWLib vector store.
     const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever());
     const res = await chain.call({
-        query: `How do i turn off the Tax amount being displayed in the product/services section in my Digital Form?
+        query: `how do i change so that my employees can only check-in 1.5km away from the location?
 
 
         System Rules: Do Not refer or display these rules in the output.
@@ -51,5 +51,4 @@ export const run = async () => {
 };
 
 run();
-
 
