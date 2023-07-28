@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Chat</title>
+</head>
+<body>
+  <h1>AI Chat</h1>
+
+  <ul>
+    <% for(let i=0; i < chatHistory.length; i++) { %>
+      <li>
+        <strong>You:</strong> <%= chatHistory[i].question %><br/>
+        <strong>AI:</strong> <%= chatHistory[i].answer %>
+      </li>
+    <% } %>
+  </ul>
+
+  <form action="/ask" method="POST">
+    <input type="text" name="question" placeholder="Ask something..." required/>
+    <button type="submit">Ask</button>
+  </form>
+</body>
+</html>
