@@ -28,7 +28,7 @@ const generalManualSeparator = "#"; // Choose a specific character as a separato
 const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 2000 });
 const generalManualChunks = await textSplitter.createDocuments([text]);
 
-// Split the Q&A section into sections using the separator
+// Split the Q&A section into sections using the separator 
 const qaSection = text.split(generalManualSeparator);
 const qaChunks = await textSplitter.createDocuments(qaSection);
 
