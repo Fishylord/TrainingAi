@@ -10,7 +10,8 @@
     "agent": "node agent.js",
     "text": "node TextAI.js",
     "test": "node Test.js",
-    "A": "node textAi2.js"
+    "A": "node textAi2.js",
+    "B": "node ZIndex.js"
   },
   "keywords": [],
   "author": "",

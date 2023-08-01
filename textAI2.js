@@ -19,25 +19,7 @@ export const run = async () => {
       temperature: 0.5,
       modelName: "gpt-3.5-turbo-0613",
   }); 
-  
-
-  const content = fs.readFileSync("C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\word_data\\Test.docx", "binary");
-  const zip = new PizZip(content);
-  const doc = new Docxtemplater(zip);
-  doc.render();
-  const text = doc.getFullText();
-
-  const generalManualSeparator = "#"; // Choose a specific character as a separator for the Q&A section
-
-  const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 2000 });
-  const generalManualChunks = await textSplitter.createDocuments([text]);
-
-  // Split the Q&A section into sections using the separator
-  const qaSection = text.split(generalManualSeparator);
-  const qaChunks = await textSplitter.createDocuments(qaSection);
-
-  const docs = [...generalManualChunks, ...qaChunks];
-  
+    
   //System Message
   const template = `
   {context}
@@ -54,28 +36,28 @@ export const run = async () => {
   2. To Create New Data about a Job, project, Digital Form etc. Use the Custom Field section in Template settings to create a new Data Field.
   3. This Document and Rules Are for the Chatbot For the Website. Do not provide steps that uses the Mobile Application
   4. if "Context 2:" shouldn't be referred unless needed or recommended to fulfill the question.
-  5. You are being fed chunks of context/data some parts may not be useful, needed or helpful. 
+  5. You are being fed chunks of context/data some parts may not be useful, needed or helpful.
+  6. Only disclose Details and Information when needed to fulfill and satisfy the answer. 
   6. Always End with "Please note that this AI is currently in beta, so there may be some limitations or potential issues with the answers. If you encounter any difficulties, please reach out to our customer support for further assistance."`;
   const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(template);
+
   //User Message
   const humanTemplate = "what is the UAC page?";
   const humanMessagePrompt = HumanMessagePromptTemplate.fromTemplate(humanTemplate);
 
-  // Create a vector store from the documents.
-  const vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings());
+  // Open Embedded File
+  const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json";
+  const vectorStore = await HNSWLib.load(directory, new OpenAIEmbeddings());
+  
 
-  //Perform similarity search.
-  const Search = humanTemplate;
   //Create a chain that uses the OpenAI LLM and HNSWLib vector store.
   const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(3), {
     prompt: PromptTemplate.fromTemplate(template),
   });
 
-  // const result = await vectorStore.similaritySearch("Tell me about GPS Accuracy Detection");
 
-  // console.log(result);
   const res = await chain.call({
-      query : `How to Remove a Job's To-Do list?`
+      query : `How do i find out who made changes on my job?`
   });
   console.log(res);
 

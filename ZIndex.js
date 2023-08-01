@@ -1,46 +1,42 @@
-import { PineconeClient } from "@pinecone-database/pinecone";
 import { config } from "dotenv";
 import { Document } from "langchain/document";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
-import { PineconeStore } from "langchain/vectorstores/pinecone";
+import { OpenAI } from "langchain/llms/openai";
+import PizZip from "pizzip";
+import Docxtemplater from "docxtemplater";
+import * as fs from "fs";
+import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
+import { HNSWLib } from "langchain/vectorstores/hnswlib";
 config();
 
 // Specify the OpenAI model
-const model = "gpt-3.5-turbo";
-const embeddings = new OpenAIEmbeddings({
-  
+const model = new OpenAI({
+  openAIApiKey: process.env.OPENAI_API_KEY,
+  temperature: 0.5,
+  modelName: "gpt-3.5-turbo-0613",
+}); 
 
-});
 
-// Set the OpenAI API key
-process.env.OPENAI_API_KEY = "YOUR_OPENAI_API_KEY";
+const content = fs.readFileSync("C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\word_data\\Test.docx", "binary");
+const zip = new PizZip(content);
+const doc = new Docxtemplater(zip);
+doc.render();
+const text = doc.getFullText();
 
-const client = new PineconeClient();
-await client.init({
-  apiKey: process.env.PINECONE_API_KEY,
-  environment: process.env.PINECONE_ENVIRONMENT,
-});
-const pineconeIndex = client.Index(process.env.PINECONE_INDEX);
+const generalManualSeparator = "#"; // Choose a specific character as a separator for the Q&A section
 
-const docs = [
-  new Document({
-    metadata: { foo: "bar" },
-    pageContent: "pinecone is a vector db",
-  }),
-  new Document({
-    metadata: { foo: "bar" },
-    pageContent: "the quick brown fox jumped over the lazy dog",
-  }),
-  new Document({
-    metadata: { baz: "qux" },
-    pageContent: "lorem ipsum dolor sit amet",
-  }),
-  new Document({
-    metadata: { baz: "qux" },
-    pageContent: "pinecones are the woody fruiting body and of a pine tree",
-  }),
-];
+const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 2000 });
+const generalManualChunks = await textSplitter.createDocuments([text]);
 
-await PineconeStore.fromDocuments(docs, new OpenAIEmbeddings(), {
-  pineconeIndex,
-});
+// Split the Q&A section into sections using the separator
+const qaSection = text.split(generalManualSeparator);
+const qaChunks = await textSplitter.createDocuments(qaSection);
+
+const docs = [...generalManualChunks, ...qaChunks];
+
+
+//Embedding
+const vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings());
+
+const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json";
+await vectorStore.save(directory);
