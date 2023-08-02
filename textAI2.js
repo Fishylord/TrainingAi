@@ -51,16 +51,17 @@ export const run = async () => {
   
 
   //Create a chain that uses the OpenAI LLM and HNSWLib vector store.
-  const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(3), {
+  const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(4), {
     prompt: PromptTemplate.fromTemplate(template),
   });
 
 
   const res = await chain.call({
-      query : `How do i find out who made changes on my job?`
+      query : `How do i Add a new company address part to my Job details` 
   });
   console.log(res);
 
 };
 
 run();
+

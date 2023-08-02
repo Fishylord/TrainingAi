@@ -40,3 +40,6 @@ const vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings());
 
 const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json";
 await vectorStore.save(directory);
+
+
+
