@@ -38,7 +38,7 @@ export const run = async () => {
   4. if "Context 2:" shouldn't be referred unless needed or recommended to fulfill the question.
   5. You are being fed chunks of context/data some parts may not be useful, needed or helpful.
   6. Only disclose Details and Information when needed to fulfill and satisfy the answer. 
-  6. Always End with "Please note that this AI is currently in beta, so there may be some limitations or potential issues with the answers. If you encounter any difficulties, please reach out to our customer support for further assistance."`;
+  7. Always End with "Please note that this AI is currently in beta, so there may be some limitations or potential issues with the answers. If you encounter any difficulties, please reach out to our customer support for further assistance."`;
   const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(template);
 
   //User Message
@@ -57,7 +57,7 @@ export const run = async () => {
 
 
   const res = await chain.call({
-      query : `How do i Add a new company address part to my Job details` 
+    query : `How do i Add a new company address part to my Job details` 
   });
   console.log(res);
 

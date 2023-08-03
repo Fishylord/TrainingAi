@@ -20,29 +20,26 @@ export const run = async () => {
       modelName: "gpt-3.5-turbo-0613",
   }); 
 
-  const content = fs.readFileSync("C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\word_data\\Test.docx", "binary");
-    const zip = new PizZip(content);
-    const doc = new Docxtemplater(zip);
-    doc.render();
-    const text = doc.getFullText();
+  const content = fs.readFileSync("C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\word_data\\Context.txt", "binary");
+  const text = content.getFullText();
 
-    const generalManualSeparator = "#"; // Choose a specific character as a separator for the Q&A section
+  const generalManualSeparator = "#"; // Choose a specific character as a separator for the Q&A section
 
-    const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 2000 });
-    const generalManualChunks = await textSplitter.createDocuments([text]);
+  const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 2000 });
+  const generalManualChunks = await textSplitter.createDocuments([text]);
 
-    // Split the Q&A section into sections using the separator 
-    const qaSection = text.split(generalManualSeparator);
-    const qaChunks = await textSplitter.createDocuments(qaSection);
+  // Split the Q&A section into sections using the separator 
+  const qaSection = text.split(generalManualSeparator);
+  const qaChunks = await textSplitter.createDocuments(qaSection);
 
-    const docs = [...generalManualChunks, ...qaChunks];
+  const docs = [...generalManualChunks, ...qaChunks];
 
 
-    //Embedding
-    const vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings());
+  //Embedding
+  const vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings());
 
-    const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json";
-    await vectorStore.save(directory);
+  const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json";
+  await vectorStore.save(directory);
   //System Message
   const template = `
   {context}
