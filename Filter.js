@@ -23,7 +23,7 @@ export const run = async () => {
 
   const generalManualSeparator = "#"; // Choose a specific character as a separator for the Q&A section
 
-  const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 2000 });
+  const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 10000 });
   const generalManualChunks = await textSplitter.createDocuments([text]);
 
   // Split the Q&A section into sections using the separator 
@@ -46,12 +46,14 @@ export const run = async () => {
   2. Do not Answer With any text Other than The Output Expected. 
   3. Start and End with Curly Brackets, 1st Filter will be "dynamicfields" then continued by other filters.
   4. DynamicFields such as custom fields will be inside the Dynamic fields brackets.
+  5. DynamicField variables should use their variable ID's instead of their name/text
+  6. If a DynamicField is referenced it their question/Prompt And the dynamic ID is found in the context Include it in the output
   Normal Search Operators 0: Contain,1: Not Contain,2: Equal,3:Not Equal.
   Date Search Operators 0: Within,1:Not Within,2:More and Equals Than,3: Less and Equals Than,4: More than, 5: Less Than.
-  Output Examples: <"dynamicfields": <>,"assetcategory":<"operator":"0","value":123417>> (the < and > represent curly brackets)(Only "Var)
+  Output Examples: <"dynamicfields": <>,"assetcategory":<"operator":"0","value":123417>> (the < and > represent curly brackets) (If it is a Dynamic Field put the IDs as the filter search variable example "XXX":<operator>)
   Date/Time Filter Sample: "activityenddate":<o"operator":"0","value":<"type":"Date","min":"2023-08-09","max":"2023-08-17">>
-  Contain/Non Contain Operator: "dealseqno":<"operator":"0","value":<"type":"Number","min":0,"max":"100">>`;
-
+  Number Contain/Non Contain Operator: "dealseqno":<"operator":"0","value":<"type":"Number","min":0,"max":"100">> (Only For Values, if type is text min and max would just be "")`;
+  
  
   //User Message
   const humanTemplate = "what is the UAC page?";
@@ -59,16 +61,17 @@ export const run = async () => {
 
 
   //Create a chain that uses the OpenAI LLM and HNSWLib vector store.
-  const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(5), {
+  const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(), {
     prompt: PromptTemplate.fromTemplate(template),
   }); 
   
 
   const res = await chain.call({
-      query : `product phones that were given more than 10% discounts that has around 50-100$ more in collections from activities created by John in a activity between August 1-4th` 
+      query : `SRE Info with the text Sales that were given more than 10% discounts that has around 50-100$ more in collections from activities created by John in a activity between August 1-4th` 
   });
   console.log(res);
 
 };
 
 run();
+ 
