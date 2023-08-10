@@ -61,9 +61,8 @@ export const run = async () => {
   
  
   //User Message
-  const humanTemplate = "what is the UAC page?";
+  const humanTemplate = `Electronic parts with the text laptop that were given 10% or more discounts (Can't use Date Search operators) that has around 50-100$ more in collections from activities created by John in a activity between August 1-4th`;
   const humanMessagePrompt = HumanMessagePromptTemplate.fromTemplate(humanTemplate);
-
 
   //Create a chain that uses the OpenAI LLM and HNSWLib vector store.
   const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(10), {
@@ -72,11 +71,11 @@ export const run = async () => {
 
 
   const res = await chain.call({
-      query : `SRE Info with the text Sales that were given 10% or more discounts (Can't use Date Search operators) that has around 50-100$ more in collections from activities created by John in a activity between August 1-4th` 
+      query : humanTemplate
   });
   console.log(res);
   
-};
+}; 
 
 
 run();
