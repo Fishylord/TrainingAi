@@ -40,7 +40,7 @@ export const run = async () => {
     System Notes:
     1. Page directories are represented by the >. example X > Y >Z, Output must be phrased like this: Press X and press Y then press Z to enter Z page.
     2. To Create New Data about a Job, project, Digital Form etc. Use the Custom Field section in Template settings to create a new Data Field.
-    3. This Document and Rules Are for the Chatbot For the Website. Do not provide steps that uses the Mobile Application
+    3. This Document and Rules Are for the Chatbot For the Website. Do not provide steps that uses the Mobile Application.
     4. Always End with "Please note that this AI is currently in beta, so there may be some limitations or potential issues with the answers. If you encounter any difficulties, please reach out to our customer support for further assistance."
     {context}
     Question: {question}`;
