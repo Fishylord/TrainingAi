@@ -10,13 +10,17 @@ fs.readFile('C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\word_data\\Tes
     // Parse the JSON data
     const jsonData = JSON.parse(data);
     
+    let Details = '';  // Declare the Details variable
+    
     // Format the data according to the desired output
     const formattedData = jsonData.data.map((item, index) => {
-        return `# Data ID: ${index} customer: ${item.customername}`;
+        const line = `# Data ID: ${index + 1} customer: ${item.customername} URL: ${item.ref_url}`;
+        
+        Details += line + '\n';  // Append each line to Details
     });
 
     // Print the formatted data
-    formattedData.forEach(line => {
-        console.log(line);
-    });
+
+    // Print the Details
+    console.log('Details:\n', Details);
 });
