@@ -58,7 +58,7 @@ export const run = async () => {
   2. Date/Time Filter Sample: "activityenddate":<"operator":"0","value":<"type":"Date","min":"2023-08-09","max":"2023-08-17">>
   3. Number Contain/Non Contain Operator: "dealseqno":<"operator":"0","value":<"type":"Number","min":0,"max":"100">> (Only For Values, if type is text min and max would just be "")
   Output must be a single continuous string without any newline (\n) or added spaces.`;
-  
+
  
   //User Message
   const humanTemplate = `SRE info with the text Sales that were given 10% or more discounts (Can't use Date Search operators) that has around 50-100$ more in collections from activities created by John in a activity starting between August 1-4th`;
