@@ -22,5 +22,5 @@ fs.readFile('C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\word_data\\Tes
     // Print the formatted data
 
     // Print the Details
-    console.log('Details:\n', Details);
+    console.log('Details:\n', Details); 
 });

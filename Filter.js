@@ -9,7 +9,6 @@ import * as fs from "fs";
 import { SystemMessagePromptTemplate, HumanMessagePromptTemplate, } from "langchain/prompts";
 config()
 
-
 export const run = async () => {
   // Initialize the LLM to use to answer the question.
   const model = new OpenAI({
@@ -24,7 +23,7 @@ export const run = async () => {
   const generalManualSeparator = "#"; // Choose a specific character as a separator for the Q&A section
 
   const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 10000 });
-  const generalManualChunks = await textSplitter.createDocuments([text]);
+  const generalManualChunks = await textSplitter.createDocuments([text]); 
 
   // Split the Q&A section into sections using the separator 
   const qaSection = text.split(generalManualSeparator);
