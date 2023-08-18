@@ -13,7 +13,7 @@ export const run = async () => {
   // Initialize the LLM to use to answer the question.
   const model = new OpenAI({
       openAIApiKey: process.env.OPENAI_API_KEY,
-      temperature: 0.0,
+      temperature: 0.2,
       modelName: "gpt-3.5-turbo-0613",
   }); 
 
@@ -52,19 +52,20 @@ export const run = async () => {
   Operator Guide:
   1. Number and Text Type Filter Operators 0: Contain (use this for discount),1: Not Contain,2: Equal (Only takes 1 Number No minmax),3:Not Equal.
   2. Date Filter Operators 0: Within,1:Not Within,2:More and Equals Than,3: Less and Equals Than,4: More than, 5: Less Than.
+  3. When using Equal and Not Equal Operators, The value variable should be used and Its main purpose are for specific numbers/values/text. and Min and Max should just be empty ("")
+  4. Use Contain Operator 0,1 For when a range is asked by the user. As well a range such as between 25-30 25 should be placed inside Min: and 30 inside Max:.
   Sample Outputs:
-  1. Output Examples: <"dynamicfields": <>,"assetcategory":<"operator":"0","value":123417>> (the < and > represent curly brackets) (If it is a Dynamic Field put the IDs as the filter search variable example "XXX":<operator>)
+  1. Output Examples: <"dynamicfields": <>,"assetcategory":<"operator":"0","value":123417>> (the < and > represent curly brackets)
   2. Date/Time Filter Sample: "activityenddate":<"operator":"0","value":<"type":"Date","min":"2023-08-09","max":"2023-08-17">>
-  3. Number Contain/Non Contain Operator: "dealseqno":<"operator":"0","value":<"type":"Number","min":0,"max":"100">> (Only For Values, if type is text min and max would just be "")
   Output must be a single continuous string without any newline (\n) or added spaces.`;
 
  
   //User Message
-  const humanTemplate = `SRE info with the text Sales that were given 10% or more discounts (Can't use Date Search operators) that has around 50-100$ more in collections from activities created by John in a activity starting between August 1-4th`;
+  const humanTemplate = `SRE info with the text Sales that were given 10% or more discounts (Can't use Date Search operators) that has around 50$ to 100$ more in collections(contain operator) from activities created by John in a activity starting between August 1-4th`;
   const humanMessagePrompt = HumanMessagePromptTemplate.fromTemplate(humanTemplate); 
 
   //Create a chain that uses the OpenAI LLM and HNSWLib vector store.
-  const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(10), {
+  const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(20), {
     prompt: PromptTemplate.fromTemplate(template),
   }); 
 
@@ -72,11 +73,11 @@ export const run = async () => {
   const res = await chain.call({
       query : humanTemplate
   });
-  console.log(res);
+  let jsonObjecct = JSON.parse(res.text);
+  let cleanedOutput = JSON.stringify(jsonObjecct);
+  console.log(cleanedOutput);
   
 }; 
 
 
 run();
-
-

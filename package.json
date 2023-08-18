@@ -11,7 +11,8 @@
     "text": "node TextAI.js",
     "test": "node Test.js",
     "A": "node textAi2.js",
-    "B": "node ZIndex.js"
+    "B": "node ZIndex.js",
+    "C": "node cleaning.js"
   },
   "keywords": [],
   "author": "",
