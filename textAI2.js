@@ -41,7 +41,7 @@ export const run = async (humanTemplate) => {
   6. Only disclose Details and Information when needed to fulfill and satisfy the answer. 
   7. Always End with "Please note that this AI is currently in beta, so there may be some limitations or potential issues with the answers. If you encounter any difficulties, please reach out to our customer support for further assistance."`;
   const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(template);
-
+  
 
   // Open Embedded File
   const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json";
