@@ -23,6 +23,7 @@ app.post('/api/message', async (req, res) => {
   }
 });
 
+
 app.get('/api/lastResponse', (req, res) => {
     if (lastMessageProcessed) {
         res.send({ aiResponse: lastMessageProcessed });
@@ -30,6 +31,7 @@ app.get('/api/lastResponse', (req, res) => {
         res.send({ error: "No message processed yet." });
     }
 });
+
 
 const PORT = 8000;
 app.listen(PORT, () => {
