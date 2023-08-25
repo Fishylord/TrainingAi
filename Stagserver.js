@@ -1,5 +1,5 @@
 import express from 'express';
-import { run } from './textAI2.js'; // Adjust the path if needed
+import { run } from './textAI3.js'; // Adjust the path if needed
 
 const app = express();
 
@@ -32,7 +32,7 @@ app.get('/api/lastResponse', (req, res) => {
     }
 });
 
-5
+
 const PORT = 8000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);

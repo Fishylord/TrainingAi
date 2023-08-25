@@ -7,14 +7,14 @@ import { ConversationalRetrievalQAChain } from "langchain/chains";
 config()
 
 
-export const run = async () => {
+export const run = async (humanTemplate) => {
   // Initialize the LLM to use to answer the question.
   const model = new OpenAI({
       openAIApiKey: process.env.OPENAI_API_KEY,
       temperature: 0.1,
       modelName: "gpt-3.5-turbo-0613",
   }); 
-
+8
   
   //System Message
   const template = `
@@ -41,26 +41,20 @@ export const run = async () => {
   // Open Embedded File
   const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json";
   const vectorStore = await HNSWLib.load(directory, new OpenAIEmbeddings());
-  const humanTemplate = "What is the UAC page?"; 
   //Create a chain that uses the OpenAI LLM and HNSWLib vector store. 
-  const chain = ConversationalRetrievalQAChain.fromLLM(model, vectorS4tore.asRetriever(5), { 
+  const chain = ConversationalRetrievalQAChain.fromLLM(model, vectorStore.asRetriever(8), { 
     memory: new BufferMemory({ 
-        memoryKey: "chat_history", 
+        memoryKey: "chat_history",
         returnMessages: true,
     }),
     questionGeneratorChainOptions: {
       template: template,
     }
   });  
-
+  console.log(chain.memory.get("chat_history"));
   
   const res = await chain.call({
-    question : "how do create a job?",
-  });
-  console.log(res);
-  const res2 = await chain.call({
-    question : "what is all the pages possible i can create it from?"
-  });
-  console.log(res2);
+    question : humanTemplate,
+  }); 
+  return res;
 };
-run();
