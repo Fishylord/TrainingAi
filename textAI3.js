@@ -14,8 +14,8 @@ export const run = async (humanTemplate) => {
       temperature: 0.1,
       modelName: "gpt-3.5-turbo-0613",
   }); 
-8
-  
+
+
   //System Message
   const template = `
   Chat History : {chat_history}
@@ -43,18 +43,17 @@ export const run = async (humanTemplate) => {
   const vectorStore = await HNSWLib.load(directory, new OpenAIEmbeddings());
   //Create a chain that uses the OpenAI LLM and HNSWLib vector store. 
   const chain = ConversationalRetrievalQAChain.fromLLM(model, vectorStore.asRetriever(8), { 
-    memory: new BufferMemory({ 
+    memory: new BufferMemory({  
         memoryKey: "chat_history",
         returnMessages: true,
-    }),
+    }), 
     questionGeneratorChainOptions: {
-      template: template,
+      template: template, 
     }
   });  
-  console.log(chain.memory.get("chat_history"));
   
   const res = await chain.call({
     question : humanTemplate,
   }); 
   return res;
-};
+}; 

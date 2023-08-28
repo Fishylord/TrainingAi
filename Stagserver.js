@@ -24,6 +24,7 @@ app.post('/api/message', async (req, res) => {
 });
 
 
+
 app.get('/api/lastResponse', (req, res) => {
     if (lastMessageProcessed) {
         res.send({ aiResponse: lastMessageProcessed });
@@ -37,3 +38,4 @@ const PORT = 8000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+ 
