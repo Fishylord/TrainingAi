@@ -4,6 +4,7 @@ import { HNSWLib } from "langchain/vectorstores/hnswlib";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { BufferMemory } from "langchain/memory";
 import { ConversationalRetrievalQAChain } from "langchain/chains";
+import { urlencoded } from "express";
 config()
 
 
@@ -36,8 +37,8 @@ export const run = async (humanTemplate) => {
   5. You are being fed chunks of context/data some parts may not be useful, needed or helpful.
   6. Only disclose Details and Information when needed to fulfill and satisfy the answer. 
   7. Always End with "Please note that this AI is currently in beta, so there may be some limitations or potential issues with the answers. If you encounter any difficulties, please reach out to our customer support for further assistance."`;
-
-
+  
+  
   // Open Embedded File
   const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json";
   const vectorStore = await HNSWLib.load(directory, new OpenAIEmbeddings());
@@ -51,9 +52,11 @@ export const run = async (humanTemplate) => {
       template: template, 
     }
   });  
-  
-  const res = await chain.call({
+  console.log(template);
+
+  const res = await chain.call({ 
     question : humanTemplate,
   }); 
   return res;
-}; 
+};
+  
