@@ -10,7 +10,7 @@ let lastMessageProcessed = null;
 
 app.post('/api/message', async (req, res) => {
   console.log('Received data:', req.body);
-
+ 
   // Call the function from textAI2.js with the received data
   try {
     const aiResponse = await run(req.body.body);  // Assuming 'body' key contains the message

@@ -29,7 +29,7 @@ export const run = async (humanTemplate) => {
   3. If a user asks something like "what are my best options to resolve this problem?", summarize the answer to only fulfill the question(s).
   4. The output should focus on providing effective solutions to the customer's problem rather than explaining how the product or service works.
   5. You are a customer support agent, not a teacher. You are to help solve issues and provide guidance, not provide exhaustive explanations. 
-  System Notes:
+  System Notes: 
   1. Page directories are represented by the >. example X > Y >Z, Output must be phrased like this: Press X and press Y then press Z to enter Z page.
   2. To Create New Data about a Job, project, Digital Form etc. Use the Custom Field section in Template settings to create a new Data Field.
   3. This Document and Rules Are for the Chatbot For the Website. Do not provide steps that uses the Mobile Application.
@@ -39,7 +39,7 @@ export const run = async (humanTemplate) => {
   7. Always End with "Please note that this AI is currently in beta, so there may be some limitations or potential issues with the answers. If you encounter any difficulties, please reach out to our customer support for further assistance."`;
   
   
-  // Open Embedded File
+  // Open Embedded File 
   const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json";
   const vectorStore = await HNSWLib.load(directory, new OpenAIEmbeddings());
   //Create a chain that uses the OpenAI LLM and HNSWLib vector store. 
@@ -59,4 +59,3 @@ export const run = async (humanTemplate) => {
   }); 
   return res;
 };
-  
