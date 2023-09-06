@@ -28,7 +28,7 @@ export const run = async () => {
   // Split the Q&A section into sections using the separator 
   const qaSection = text.split(generalManualSeparator);
   const qaChunks = await textSplitter.createDocuments(qaSection);
-
+  
   const docs = [...generalManualChunks, ...qaChunks];
 
 
@@ -39,6 +39,7 @@ export const run = async () => {
   const template = `
   {context}
   Question: {question}
+  the template should include the chat_history what should have been.
   `;
 
  
@@ -46,6 +47,7 @@ export const run = async () => {
   const humanTemplate = `a`;
   const humanMessagePrompt = HumanMessagePromptTemplate.fromTemplate(humanTemplate); 
 
+  
   //Create a chain that uses the OpenAI LLM and HNSWLib vector store.
   const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(20), {
     prompt: PromptTemplate.fromTemplate(template),
