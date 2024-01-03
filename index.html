@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Interface</title>
+    <style>
+        #chatbox {
+            width: 1980px;
+            height: 800px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-y: scroll;
+        }
+        #input {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatbox"></div>
+    <input type="text" id="input" placeholder="Type a message...">
+    <script>
+        const chatbox = document.getElementById('chatbox');
+        const input = document.getElementById('input');
+    
+        input.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                let message = this.value;
+                this.value = '';
+    
+                chatbox.innerHTML += `<div>User: ${message}</div>`;
+                chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
+    
+                fetch('http://localhost:8000/sendMessage', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: message }),
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('Server response was not OK.');
+                    }
+                })
+                .then(data => {
+                    chatbox.innerHTML += `<div>Bot: ${data.reply}</div>`;
+                    chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    chatbox.innerHTML += `<div>Error: Could not get response</div>`;
+                })
+                .finally(() => {
+                    input.focus(); // Refocus on the input field
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
