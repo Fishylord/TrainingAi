@@ -85,6 +85,4 @@ export const runChatModel = async (inputText) => {
     console.log(result);
     return result.output;
     
-
-    
 };
