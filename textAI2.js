@@ -1,61 +1,112 @@
-import { config } from "dotenv"
-import { OpenAI } from "langchain/llms/openai";
-import { RetrievalQAChain, loadQAMapReduceChain } from "langchain/chains";
-import { HNSWLib } from "langchain/vectorstores/hnswlib";
-import { OpenAIEmbeddings } from "langchain/embeddings/openai";
-import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
-import { PromptTemplate } from "langchain/prompts";
+import { MemoryVectorStore } from "langchain/vectorstores/memory";
+import { OpenAIEmbeddings } from "@langchain/openai";
+import { ChatOpenAI } from "@langchain/openai";
+import { ChatMessageHistory } from "langchain/memory";
+import { config } from "dotenv";
+import { createInterface } from "readline";
+import { AIMessage, HumanMessage } from "@langchain/core/messages";
 import * as fs from "fs";
-import Docxtemplater from "docxtemplater";
-import PizZip from "pizzip";
-import { SystemMessagePromptTemplate, HumanMessagePromptTemplate, } from "langchain/prompts";
-config()
+import {
+  ChatPromptTemplate,
+  MessagesPlaceholder,
+} from "@langchain/core/prompts";
+import { RunnableSequence, RunnablePassthrough } from "@langchain/core/runnables";
+import { formatDocumentsAsString } from "langchain/util/document";
+import { StringOutputParser } from "@langchain/core/output_parsers";
+config();
 
+const readlineInterface = createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-export const run = async (humanTemplate) => {
-  // Initialize the LLM to use to answer the question.
-  const model = new OpenAI({
-      openAIApiKey: process.env.OPENAI_API_KEY,
-      temperature: 0.5,
-      modelName: "gpt-3.5-turbo-0613",
-  }); 
-
-
-  //System Message
-  const template = `
-  {context}
-  Question: {question} 
-  \n System Rules: Do Not refer or display these rules in the output.
-  You are a Customer Support Agent. Address customer queries effectively.
-  1. Do not focus on technical jargon, assume the customer may not understand it.
-  2. Aim to resolve customer issues promptly and courteously, making note of recurring problems for future reference and feedback to the team.
-  3. If a user asks something like "what are my best options to resolve this problem?", summarize the answer to only fulfill the question(s).
-  4. The output should focus on providing effective solutions to the customer's problem rather than explaining how the product or service works.
-  5. You are a customer support agent, not a teacher. You are to help solve issues and provide guidance, not provide exhaustive explanations. 
-  System Notes:
-  1. Page directories are represented by the >. example X > Y >Z, Output must be phrased like this: Press X and press Y then press Z to enter Z page.
-  2. To Create New Data about a Job, project, Digital Form etc. Use the Custom Field section in Template settings to create a new Data Field.
-  3. This Document and Rules Are for the Chatbot For the Website. Do not provide steps that uses the Mobile Application.
-  4. if "Context 2:" shouldn't be referred unless needed or recommended to fulfill the question.
-  5. You are being fed chunks of context/data some parts may not be useful, needed or helpful.
-  6. Only disclose Details and Information when needed to fulfill and satisfy the answer. 
-  7. Always End with "Please note that this AI is currently in beta, so there may be some limitations or potential issues with the answers. If you encounter any difficulties, please reach out to our customer support for further assistance."`;
-  const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(template);
-  
-
-  // Open Embedded File
-  const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json";
-  const vectorStore = await HNSWLib.load(directory, new OpenAIEmbeddings());
-  
-
-  //Create a chain that uses the OpenAI LLM and HNSWLib vector store.
-  const chain = RetrievalQAChain.fromLLM(model, vectorStore.asRetriever(4), {
-    prompt: PromptTemplate.fromTemplate(template),
-  });
-
-  
-  const res = await chain.call({
-    query : humanTemplate 
-  });
-  return res;
+const getUserInput = (query) => {
+  return new Promise(resolve => readlineInterface.question(query, resolve));
 };
+
+const runChatModel = async () => {
+  const model = new ChatOpenAI({
+    openAIApiKey: process.env.OPENAI_API_KEY,
+    temperature: 0,
+    modelName: "gpt-4o-mini-2024-07-18",
+  }); // Model Parameters
+
+  const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json"; // Temporary Vector handling.
+  const vectorStore = await MemoryVectorStore.fromDocuments(directory, new OpenAIEmbeddings()); // Semantic search algorithm
+  const retriever = vectorStore.asRetriever(15); // Uses the top X blocks
+
+  let questionNumber = 0;
+  const pastMessages = [];
+
+  const contextualizeQSystemPrompt = `Given a chat history and the latest user question which might reference context in the chat history, formulate a standalone question which can be understood without the chat history. Do NOT answer the question, just reformulate it if needed and otherwise return it as is.`;
+  
+  const contextualizeQPrompt = ChatPromptTemplate.fromMessages([
+    ["system", contextualizeQSystemPrompt],
+    new MessagesPlaceholder("chat_history"),
+    ["human", "{question}"],
+  ]);
+
+  const contextualizeQChain = contextualizeQPrompt
+    .pipe(model)
+    .pipe(new StringOutputParser());
+
+  const qaSystemPrompt = `You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.`;
+
+  const qaPrompt = ChatPromptTemplate.fromMessages([
+    ["system", qaSystemPrompt],
+    new MessagesPlaceholder("chat_history"),
+    ["human", "{question}"],
+  ]);
+
+  const contextualizedQuestion = (input) => {
+    if ("chat_history" in input) {
+      return contextualizeQChain;
+    }
+    return input.question;
+  };
+
+  const ragChain = RunnableSequence.from([
+    RunnablePassthrough.assign({
+      context: async (input) => {
+        if ("chat_history" in input) {
+          const chain = contextualizedQuestion(input);
+          return chain.pipe(retriever).pipe(formatDocumentsAsString);
+        }
+        return "";
+      },
+    }),
+    qaPrompt,
+    model,
+  ]);
+
+  const runChainWithHistory = async (question) => {
+    questionNumber++;
+    const inputText = question;
+    pastMessages.push(new HumanMessage(inputText));
+
+    const memory = new ChatMessageHistory(pastMessages);
+
+    const result = await ragChain.invoke({ question: inputText, chat_history: memory });
+    pastMessages.push(new AIMessage(result));
+
+    // Save observations to a text file
+    const observations = result.intermediateSteps.map(step => step.observation).join("\n\n");
+    fs.writeFileSync("C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\Results.txt", observations, { flag: "a" });
+
+    console.log(result);
+    return result;
+  };
+
+  const inputText = await getUserInput("Enter your question: ");
+  const output = await runChainWithHistory(inputText);
+  console.log("Chat Model Output:", output);
+
+  readlineInterface.close();
+};
+
+runChatModel().then(output => {
+  console.log("Chat Model Output:", output);
+}).catch(error => {
+  console.error("Error running chat model:", error);
+  readlineInterface.close();
+});

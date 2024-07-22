@@ -4,7 +4,7 @@ import { TextLoader } from "langchain/document_loaders/fs/text";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import { createRetrieverTool } from "langchain/agents/toolkits";
 import { ChatMessageHistory } from "langchain/memory";
-import { ChatOpenAI } from "langchain/chat_models/openai";
+import ChatOpenAI from "@langchain/openai";
 import { OpenAIAgentTokenBufferMemory } from "langchain/agents/toolkits";
 import { initializeAgentExecutorWithOptions } from "langchain/agents";
 import { HNSWLib } from "langchain/vectorstores/hnswlib";
@@ -20,7 +20,7 @@ config();
 
 const readlineInterface = createInterface({
     input: process.stdin,
-    output: process.stdout
+    output: process.stdout 
 });
 
 const getUserInput = (query) => {
@@ -36,7 +36,7 @@ export const runChatModel = async () => {
 
     const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json"; // Temporary Vector handling.
     const vectorStore = await HNSWLib.load(directory, new OpenAIEmbeddings()); // Semantic search algorithm
-    const retriever = vectorStore.asRetriever(20); // Uses the top X blocks
+    const retriever = vectorStore.asRetriever(15); // Uses the top X blocks
 
     const tools = createRetrieverTool(retriever, {
         name: "DocumentationInfo",
