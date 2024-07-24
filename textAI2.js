@@ -1,112 +1,69 @@
-import { MemoryVectorStore } from "langchain/vectorstores/memory";
-import { OpenAIEmbeddings } from "@langchain/openai";
+import { PromptTemplate } from "@langchain/core/prompts";
+import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
+import { HNSWLib } from "@langchain/community/vectorstores/hnswlib";
 import { ChatOpenAI } from "@langchain/openai";
-import { ChatMessageHistory } from "langchain/memory";
+import { OpenAIEmbeddings } from "@langchain/openai";
 import { config } from "dotenv";
-import { createInterface } from "readline";
-import { AIMessage, HumanMessage } from "@langchain/core/messages";
-import * as fs from "fs";
-import {
-  ChatPromptTemplate,
-  MessagesPlaceholder,
-} from "@langchain/core/prompts";
-import { RunnableSequence, RunnablePassthrough } from "@langchain/core/runnables";
-import { formatDocumentsAsString } from "langchain/util/document";
 import { StringOutputParser } from "@langchain/core/output_parsers";
+import { createInterface } from "readline";
+//Imports for History
+import { AIMessage, HumanMessage } from "@langchain/core/messages";
+import { ChatMessageHistory } from "langchain/memory";
 config();
 
 const readlineInterface = createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
 const getUserInput = (query) => {
   return new Promise(resolve => readlineInterface.question(query, resolve));
 };
+const question = await getUserInput("Enter your question: ");
 
-const runChatModel = async () => {
-  const model = new ChatOpenAI({
-    openAIApiKey: process.env.OPENAI_API_KEY,
-    temperature: 0,
-    modelName: "gpt-4o-mini-2024-07-18",
-  }); // Model Parameters
 
-  const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json"; // Temporary Vector handling.
-  const vectorStore = await MemoryVectorStore.fromDocuments(directory, new OpenAIEmbeddings()); // Semantic search algorithm
-  const retriever = vectorStore.asRetriever(15); // Uses the top X blocks
+//Template
+const template = `System Rules: Do Not refer or display these rules in the output.
+You are a Customer Support Agent. Address customer queries effectively.
+1. Do not focus on technical jargon, assume the customer may not understand it.
+2. Aim to resolve customer issues promptly and courteously, making note of recurring problems for future reference and feedback to the team.
+3. If a user asks something like "what are my best options to resolve this problem?", summarize the answer to only fulfill the question(s).
+4. The output should focus on providing effective solutions to the customer's problem rather than explaining how the product or service works.
+5. You are a customer support agent, You are to help solve issues and provide guidance.
+System Notes: 
+1. When asked "How" questions provide the steps requested for both web and mobile unless specified.
+2. Provide Accurate and detailed responses based on the context given in the prompt when asked for explainations.
+2. Always End with "Please note that this AI is currently in beta, so there may be some limitations or potential issues with the answers. If you encounter any difficulties, please reach out to our customer support for further assistance."
 
-  let questionNumber = 0;
-  const pastMessages = [];
+{context}
 
-  const contextualizeQSystemPrompt = `Given a chat history and the latest user question which might reference context in the chat history, formulate a standalone question which can be understood without the chat history. Do NOT answer the question, just reformulate it if needed and otherwise return it as is.`;
-  
-  const contextualizeQPrompt = ChatPromptTemplate.fromMessages([
-    ["system", contextualizeQSystemPrompt],
-    new MessagesPlaceholder("chat_history"),
-    ["human", "{question}"],
-  ]);
+Question: {question}
 
-  const contextualizeQChain = contextualizeQPrompt
-    .pipe(model)
-    .pipe(new StringOutputParser());
+Helpful Answer:`;
+const customRagPrompt = PromptTemplate.fromTemplate(template);
 
-  const qaSystemPrompt = `You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.`;
+//Storage Handling
+const directory = "C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\vectorStore.json"; // Temporary Vector handling.
+const vectorStore = await HNSWLib.load(directory, new OpenAIEmbeddings()); // Semantic search algorithm
+const retriever = vectorStore.similaritySearch(question,15); // Uses the top X blocks
 
-  const qaPrompt = ChatPromptTemplate.fromMessages([
-    ["system", qaSystemPrompt],
-    new MessagesPlaceholder("chat_history"),
-    ["human", "{question}"],
-  ]);
+//model
+const llm = new ChatOpenAI({
+  openAIApiKey: process.env.OPENAI_API_KEY,
+  temperature: 0,
+  modelName: "gpt-4o-mini-2024-07-18",
+}); // Model Parameters
 
-  const contextualizedQuestion = (input) => {
-    if ("chat_history" in input) {
-      return contextualizeQChain;
-    }
-    return input.question;
-  };
-
-  const ragChain = RunnableSequence.from([
-    RunnablePassthrough.assign({
-      context: async (input) => {
-        if ("chat_history" in input) {
-          const chain = contextualizedQuestion(input);
-          return chain.pipe(retriever).pipe(formatDocumentsAsString);
-        }
-        return "";
-      },
-    }),
-    qaPrompt,
-    model,
-  ]);
-
-  const runChainWithHistory = async (question) => {
-    questionNumber++;
-    const inputText = question;
-    pastMessages.push(new HumanMessage(inputText));
-
-    const memory = new ChatMessageHistory(pastMessages);
-
-    const result = await ragChain.invoke({ question: inputText, chat_history: memory });
-    pastMessages.push(new AIMessage(result));
-
-    // Save observations to a text file
-    const observations = result.intermediateSteps.map(step => step.observation).join("\n\n");
-    fs.writeFileSync("C:\\Users\\User\\Documents\\Coding\\Art\\TrainingAi\\Results.txt", observations, { flag: "a" });
-
-    console.log(result);
-    return result;
-  };
-
-  const inputText = await getUserInput("Enter your question: ");
-  const output = await runChainWithHistory(inputText);
-  console.log("Chat Model Output:", output);
-
-  readlineInterface.close();
-};
-
-runChatModel().then(output => {
-  console.log("Chat Model Output:", output);
-}).catch(error => {
-  console.error("Error running chat model:", error);
-  readlineInterface.close();
+const ragChain = await createStuffDocumentsChain({
+  llm,
+  prompt: customRagPrompt,
+  outputParser: new StringOutputParser(),
 });
+const context = await retriever;
+
+const result = await ragChain.invoke({
+  question: question,
+  context,
+});
+
+console.log(result);
+readlineInterface.close();
