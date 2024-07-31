@@ -23,21 +23,6 @@ Welcome to the Sales Connection Support Site. Here you'll find documentation and
 - [How to Add New User Category?](Add_New_User_Category.md)
 
 
-### Import
-- [How to Import New Customer(s)?](Import_Customer.md)
-- [How to Import New Project(s)?](Import_Project.md)
-- [How to Import New Product/Services(s)?](Import_Product_Services.md)
-- [How do I Import New Asset(s)?](Import_Asset.md)
-- [How to Import New UOM(s)?](Import_UOM.md)
-- [How do I Import New User(s)?](Import_User.md)
-- [How to Import New Contact(s)?](Import_Contact.md)
-
-
-### Bulk Update
-- [How to do Customer/Project/Product/Services/UOM Bulk Update?](Customer_Bulk_Update.md)
-- [How to do Asset Bulk Update?](Asset_Bulk_Update.md)
-
-
 ### Updates
 - [My updates are not received by my admin and other team members. Why?](Updates_Not_Received_by_Team_Members.md)
 - [How to Check Pending Update?](Check_Pending_Update.md)
@@ -89,7 +74,7 @@ Welcome to the Sales Connection Support Site. Here you'll find documentation and
 
 ### Notification
 - [I Get Spammed By a Lot of Notifications. How Do I Disable It?](Disable_Notification.md)
-- [I am Not Getting Any Notification From System. Why?](I_am_Not_Getting_Any_Notification_From_System_Why.md)
+- [I am Not Getting Any Notification From the System On My Device. Why?](Not_Getting_Notification.md)
 
 
 ### Others
@@ -103,7 +88,7 @@ Welcome to the Sales Connection Support Site. Here you'll find documentation and
 - [How to Access Submitted Public Form?](Access_Submitted_Public_Form.md)
 - [How to Add New Product/Services?](Add_New_Product&Service_List.md)
 - [Comment Category Segmentation](Comment_Category_Segmentation.md)
-  
+- [Why I Cannot Find my Project?](Can't_Find_Project.md)
   
 ## Features Knowledge 
 - [Data Level Structure](Data_Level_Structure.md)
@@ -115,7 +100,7 @@ Welcome to the Sales Connection Support Site. Here you'll find documentation and
 - [How to Generate and Share QR Code for Public Form?](Creation_of_Public_Form.md)
 
 
-## Business Managament
+## Business Management
 
 ### Schedule
 - [How to Add New Job?](Add_New_Job.md)
@@ -146,8 +131,19 @@ Welcome to the Sales Connection Support Site. Here you'll find documentation and
 - [Update Report Page](Update_Report_Page.md)
 - [How to Access Submitted Public Form?](Access_Submitted_Public_Form.md)
 
+## Business Metrics
+- [Metric Dashboard](Metric_Dashboard.md)
+- [Metric Dashboard Layout Settings](Metric_Dashboard_Layout_Settings.md)
+- [Performance Metrics (App)](Performance_Metrics_App.md)
+
+
+## Business Map 
+- [Business Travel (List)](Business_Travel_List.md)
+- [Business Travel (Table)](Business_Travel_Table.md)
+  
 
 ## HR Suite
+- [How to Add Claim?](Add_Claim.md)
 - [Claim Management](Claim_Management.md)
 - [How to Add Overtime Claim?](Add_Overtime_Claim.md)
 - [Overtime Management](Overtime_Management.md)
@@ -160,6 +156,16 @@ Welcome to the Sales Connection Support Site. Here you'll find documentation and
 ### Job Settings 
 - [To-do List Setup](To_Do_List.md)
 
+
+## Import
+- [How to Import New Customer(s)?](Import_Customer.md)
+- [How to Import New Project(s)?](Import_Project.md)
+- [How do I Import New Asset(s)?](Import_Asset.md)
+- [How to Import New Contact(s)?](Import_Contact.md)
+- [How to Import New Product/Services(s)?](Import_Product_Services.md)
+- [How to Import New UOM(s)?](Import_UOM.md)
+- [How to do Customer/Project/Product/Services/UOM Bulk Update?](Customer_Bulk_Update.md)
+- [How to do Asset Bulk Update?](Asset_Bulk_Update.md)
 
 ## Template Settings
 
@@ -177,18 +183,27 @@ Welcome to the Sales Connection Support Site. Here you'll find documentation and
 
 
 ## User Management 
+
+### User Account Customization 
 - [UAC Policy Management](UAC_Policy_Management.md)
 - [Company Profile Settings](Company_Profile_Settings.md)
+- [Notification Settings by User Account](Notification_Settings_by_User_Account.md)
+- [How do I Import New User(s)?](Import_User.md)
 
 
 ## Wizard
 - [Wizard Page](Wizard_Page.md)
 <br><br>
+
 Feel free to explore the sections above by clicking it for more information.<br><br>
 
 Thank you for choosing Sales Connection.
 
- ~ ## How to Access Submitted Public Form?
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/1_Draft_Menu.html) -->
+ ~ Version 1.0<br>
+Created: 16 July 2024<br>
+Updated: 16 July 2024<br>
+## How to Access Submitted Public Form?
 
 *Note: If you are unable to access the Public Form, please reach out to your admin for assistance.
 
@@ -417,15 +432,129 @@ Thank you for choosing Sales Connection.
 <br><br><br>
 
 **Related Articles**
-- [How to Configure Public Form Access in UAC (Done by Admin)?](Configure_Public_Form_Access_in_UAC.md)
 - [How to Generate Public Form?](Creation_of_Public_Form.md)
-- [How to Setup Public Form Template?](Setup_Public_Form_Template_Page.md)
 - [How to Pull Out Job/Project/Form Report?](Export_Report.md)
 - [How to Filter Job by Date Range?](Job_Filter_by_Date_Range.md)
 - [How to Set Customized Favourite Filter as Default - Desktop ](Default_Favourite_Filter.md)
 - [How to Set Customized Favourite Filter as Default - App ](Default_Favourite_Filter_App.md)
 - [How to Set Up the Column View in the Report Page?](How_to_Set_Up_the_Column_View_in_the_Report_Page.md)
 - [How to Use Update Report Filter?](Job_Update_Report_Filter.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Access_Submitted_Public_Form.html) -->
+ ~ Version 1.0<br>
+Created: 22 July 2024<br>
+Updated: 22 July 2024<br>
+## How to Add Claim?
+
+The claim feature allows company staff to easily submit and track claims for expenses such as fuel, meals, parking fees, tools, and more.<br><br>
+
+1. At the mobile navigation bar, go to Dashboard.<br>
+
+   <p align="center">
+     <img src="img2/Add_Claim_Step_1.png" alt="Add Claim Step 1" width="280" height="550">
+   </p>
+
+2. Click Business Travel.
+
+   <p align="center">
+     <img src="img2/Add_Claim_Step_2.png" alt="Add Claim Step 2" width="280" height="550">
+   </p>
+
+3. Select the date of your business travel.
+
+   <p align="center">
+     <img src="img2/Add_Claim_Step_3.png" alt="Add Claim Step 3" width="280" height="550">
+   </p>
+
+4. You can also select a date range of your travels based on the “Start Date” and “End Date”.
+
+   <p align="center">
+     <img src="img2/Add_Claim_Step_4.png" alt="Add Claim Step 4" width="280" height="550">
+   </p>
+
+5. Click on the "tick" icon.
+
+   <p align="center">
+     <img src="img2/Add_Claim_Step_5.png" alt="Add Claim Step 5" width="280" height="550">
+   </p>
+
+6. Select the Business Travel that you would like to create a claim for.
+
+   <p align="center">
+     <img src="img2/Add_Claim_Step_6.png" alt="Add Claim Step 6" width="280" height="550">
+   </p>
+  
+7. Click on "Add New Claim / Attachment".
+
+   <p align="center">
+     <img src="img2/Add_Claim_Step_7.png" alt="Add Claim Step 7" width="280" height="550">
+   </p>
+
+8. Click on "Category".
+
+   <p align="center">
+     <img src="img2/Add_Claim_Step_8.png" alt="Add Claim Step 8" width="280" height="550">
+   </p>
+
+9. Select the category that you want to claim for.
+
+   <p align="center">
+     <img src="img2/Add_Claim_Step_9.png" alt="Add Claim Step 9" width="280" height="550">
+   </p>
+
+10. Enter the details of the claim.
+
+    <p align="center">
+      <img src="img2/Add_Claim_Step_10.png" alt="Add Claim Step 10" width="280" height="550">
+    </p>
+
+11. Click on "+ Add" if you want to attach any document.
+
+    <p align="center">
+      <img src="img2/Add_Claim_Step_11.png" alt="Add Claim Step 11" width="280" height="550">
+    </p>
+
+    *Note: Only one file (photo/video/document) may be attached to a claim.<br>
+
+12. Select for the attachement's format.
+
+    <p align="center">
+      <img src="img2/Add_Claim_Step_12.png" alt="Add Claim Step 12" width="280" height="550">
+    </p>
+    
+13. Choose the photo that you want to upload as attachment.
+
+    <p align="center">
+      <img src="img2/Add_Claim_Step_13.png" alt="Add Claim Step 13" width="280" height="550">
+    </p>
+
+14. Click on the "tick" icon.
+
+    <p align="center">
+      <img src="img2/Add_Claim_Step_14.png" alt="Add Claim Step 14" width="280" height="550">
+    </p>
+
+15. Click on the "tick" icon to submit ypour claim.
+
+    <p align="center">
+      <img src="img2/Add_Claim_Step_15.png" alt="Add Claim Step 15" width="280" height="550">
+    </p>
+
+16. Your claim has been saved successfully when this prompt appears.
+
+    <p align="center">
+      <img src="img2/Add_Claim_Step_16.png" alt="Add Claim Step 16" width="280" height="550">
+    </p>
+
+    <br><br><br>
+
+**Related Articles**
+- [How to Add Overtime Claim?](Add_Overtime_Claim.md)
+- [Claim Management](Claim_Management.md)
+- [Overtime Management](Overtime_Management.md)
+- [Office Check-In Settings](Office_Check_In_Settings.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_Claim.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -517,6 +646,8 @@ Updated: 24 May 2024<br>
 **Related Articles**<br>
 - [How to Edit Checklist Dropdown Options?](Edit_Checklist_Dropdown_Options.md)
 - [How to Use Dropdown Field in Job/Project/Customer?](How_to_Use_Dropdown_Field_in_Job_Project_Customer.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_Dropdown_Options_in_Digital_Form.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -576,6 +707,8 @@ Updated: 24 May 2024<br>
 **Related Articles**
 - [How Do I Add New Status in Digital Form?](Add_New_Status_in_Digital_Form.md)
 - [How Do I Add New Status in Customer/Project/Job?](Add_New_Status_in_Customer_Project_Job.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_New_Category_in_Customer_Project_Job.html) -->
  ~ ## How do I Add New Category in Digital Form?
     
   1. For example, if you wish to add new category in Delivery Order. At the desktop site's navigation bar, go to Company Settings > Digital Form Settings > Digital Form Category.<br>
@@ -645,9 +778,11 @@ Updated: 24 May 2024<br>
 - [How Do I Add New Category in Customer/Project/Job?](Add_New_Category_in_Customer_Project_Job.md)
 - [How Do I Add New Status in Customer/Project/Job?](Add_New_Status_in_Customer_Project_Job.md)
 - [How Do I Add New Status in Digital Form?](Add_New_Status_in_Digital_Form.md)  
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_New_Category_in_Digital_Form.html) -->
  ~ Version 1.0<br>
 Created: 18 June 2024<br>
-Updated: 18 June 2024<br>
+Updated: 26 June 2024<br>
 ## How to Add New Customer?
 Note: In your system, Customer may have been renamed to other (i.e Site, Client, Company, etc.)<br>
 
@@ -662,7 +797,8 @@ Note: In your system, Customer may have been renamed to other (i.e Site, Client,
 ### Using Desktop
 
 - [From Customer List](#section3)<br>
-- [From Job Creation Page](#section4)<br><br>
+- [From Job Creation Page](#section4)<br>
+- [From Public Form](#section7)<br><br>
 
 <a id="section3"></a>
 
@@ -788,7 +924,95 @@ Note: In your system, Customer may have been renamed to other (i.e Site, Client,
      <p align="center">
        <img src="img/Add_New_Customer2_Step_9.png" alt="Add New Customer2 Step 9">
      </p>
-     <br><br>
+
+   <br><br>
+
+<a id="section7"></a>
+
+**From Public Form**<br>
+
+  1. At the desktop site's navigation bar, go to Template Settings > Public Form Templates.<br>
+     **Open Public Form Templates Page Here:** [https://salesconnection.my/PublicForm/TemplateSetting](https://salesconnection.my/PublicForm/TemplateSetting)<br>
+     
+     <p align="center">
+       <img src="img2/Add_New_Customer3_Step_1.png" alt="Add New Customer3 Step 1">
+     </p>
+
+  2. Scroll down to "Creation Control".<br>
+
+     <p align="center">
+       <img src="img2/Add_New_Customer3_Step_2.png" alt="Add New Customer3 Step 2">
+     </p>
+
+  3. Make sure the "Customer Creation" is enabled as below.<br>
+
+     <p align="center">
+       <img src="img2/Add_New_Customer3_Step_3.png" alt="Add New Customer3 Step 3">
+     </p>
+  
+  4. At the desktop's navigation bar, go to Business Reports > Public Form Report.<br>
+     **Open Public Form Report Page Here:** [https://salesconnection.my/reports/publicform](https://salesconnection.my/reports/publicform)<br>
+
+     <p align="center">
+       <img src="img2/Add_New_Customer3_Step_4.png" alt="Add New Customer3 Step 4">
+     </p>
+  
+  5. Use filter to search the Public Form you want.<br>
+
+     <p align="center">
+       <img src="img2/Add_New_Customer3_Step_5.png" alt="Add New Customer3 Step 5">
+     </p>
+  
+  6. Click the expand icon to open the Public Form details page.<br>
+
+     <p align="center">
+       <img src="img2/Add_New_Customer3_Step_6.png" alt="Add New Customer3 Step 6">
+     </p>
+  
+  7. Click "three dots" icon on the top right corner.
+
+     <p align="center">
+       <img src="img2/Add_New_Customer3_Step_7.png" alt="Add New Customer3 Step 7">
+     </p>
+     
+  8. Click "Create Customer" to create a new customer.
+ 
+     <p align="center">
+        <img src="img2/Add_New_Customer3_Step_8.png" alt="Add New Customer3 Step 8">
+     </p> 
+      
+  9. Fill out the details of the new Customer. Available fields may differ depending on your company's system setup.<br>
+
+     | Field Name| Description |
+     |-------|---------|
+     | Customer Status* | Indicates the current status of the customer. |
+     | Customer Category* | Classifies the customer based on their type. |
+     | Company Name* | The official name of the customer's company. |
+     | Customer Name | The full name of the customer contact person. |
+     | Asset | Any asset registered in the system associated with the customer. |
+     | Assigned User | The user responsible for managing this customer. |
+     | Customer Phone | The customer's contact phone number. |
+     | Customer Email | The customer's email address. |
+     | Customer Address | The physical address of the customer. |
+     
+     *Note: Fields marked with an asterisk ( * ) are required.<br>
+     
+     <p align="center">
+        <img src="img2/Add_New_Customer3_Step_9.png" alt="Add New Customer3 Step 9">
+     </p>
+
+  10. Click on the "Save Customer" button.<br>
+
+      <p align="center">
+        <img src="img2/Add_New_Customer3_Step_10.png" alt="Add New Customer3 Step 10">
+      </p>
+
+  11. Click "OK" and the new customer is added successfully. You may continue with creating a new Job.<br>
+
+      <p align="center">
+        <img src="img2/Add_New_Customer3_Step_11.png" alt="Add New Customer3 Step 11">
+      </p>
+      <br><br>
      
 <a id="section2"></a>
 
@@ -921,6 +1145,8 @@ Note: In your system, Customer may have been renamed to other (i.e Site, Client,
 - [How to Import New Customer(s)?](Import_Customer.md)
 - [How to Create Digital Form?](Create_Digital_Form.md)
 - [How to Generate and Share QR Code for Public Form?](Creation_of_Public_Form.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_New_Customer.html) -->
  ~ Version 1.0<br>
 Created: 10 June 2024<br>
 Updated: 18 June 2024<br>
@@ -1070,6 +1296,8 @@ Updated: 18 June 2024<br>
 - [How to Create Digital Form?](Create_Digital_Form.md)
 - [How to Generate and Share QR Code for Public Form?](Creation_of_Public_Form.md)
 - [How to Setup Job Template Page?](Setup_Job_Template.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_New_Job.html) -->
  ~ ## How to Add New Product/Services?
 
 **Navigate to the section by clicking it.**<br>
@@ -1145,6 +1373,8 @@ Updated: 18 June 2024<br>
 **Related Articles**
 - [How to Import New Product/Services(s)?](Import_Product_Services.md)
 - [Product/Services List](Product_Services_List.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_New_Product&Service_List.html) -->
  ~ Version 1.0<br>
 Created: 20 June 2024<br>
 Updated: 20 June 2024<br>
@@ -1290,73 +1520,130 @@ Updated: 20 June 2024<br>
 - [How to Add New Asset?](How_to_Add_New_Asset.md)
 - [How to Create Digital Form?](Create_Digital_Form.md)
 - [How to Generate and Share QR Code for Public Form?](Creation_of_Public_Form.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_New_Project.html) -->
  ~ Version 1.0<br>
 Created: 27 May 2024<br>
 Updated: 27 May 2024<br>
 ## How Do I Add New Status in Customer/Project/Job?
-    
-  1. For example, if you wish to add new status in Project. At the desktop site's navigation bar, go to Wizard.<br>
-     **Open Wizard Page Here:** [https://salesconnection.my/wizard](https://salesconnection.my/wizard)<br>
+
+**Navigate to the section by clicking it.**<br>
+
+- [Add New Status](#section1)<br>
+- [Status Segmentation](#section2)
+<br><br><br>
+
+1. The guide below shows steps for adding new status for Project. However, the steps can be replicated for Customer/Job as well. For example, if you wish to add new status in Project. At the desktop site’s navigation bar, go to Wizard.<br>
+   **Open Wizard Page Here:** [https://salesconnection.my/wizard](https://salesconnection.my/wizard)<br>
+ 
+   <p align="center">
+     <img src="img/Wizard_Sidebar.png" alt="Wizard Sidebar">
+   </p>
+
+<a id="section1"></a>
+
+## Add New Status
+
+2. Click "Project".<br>
+
+   <p align="center">
+     <img src="img/Project_In_Wizard.png" alt="Project in Wizard">
+   </p>
+ 
+3. Click "Status".<br>
+
+   <p align="center">
+     <img src="img/Project_Status_In_Wizard.png" alt="Project Status in Wizard">
+   </p>
+
+4. Click on the "Add New Status" button.<br>
+
+   <p align="center">
+     <img src="img/Add_New_Project_Status_Button.png" alt="Add New Project Status Button">
+   </p>
+
+5. To add a new status for the Contract Expired Project, please follow these steps:<br>
+
+   | Terms | Meaning |
+   |-------|---------|
+   | Name | Assign a name to the status (E.g. Contract Expired). |
+   | Edit Access | Define who can edit the Contract Expired Project when it's in this status (E.g. If the status is "Contract Expired", only specific users can make edits). |
+   | Status Modification | Specify who can change the project's status (E.g. Only certain users can modify the project's status when it's "Contract Expired"). |
+   | Digital Form Creation | Specify who can create digital form for the project when it's in this status (E.g. If the status is "Contract Expired", only specific users can create digital form). |
+   | Status Type | Categorize the status for more manageable system administration, For this example, you can select "Cancelled". |
+   | Color | Pick a color to represent the status in the system for easy reference. |
+
+   <p align="center">
+     <img src="img/New_Project_Status_Name.png" alt="New Project Status Name">
+   </p>
+
+7. Click the "Submit" button.<br>
+
+   <p align="center">
+     <img src="img/New_Project_Status_Submit_Button.png" alt="New Project Status Submit Button">
+   </p>
+
+8. Remember to click the "Save" button to save the new status.<br>
+
+   <p align="center">
+     <img src="img/New_Project_Status_Save_Button.png" alt="New Project Status Save Button">
+   </p>
+
+9. Click "OK" and the new project status has been saved successfully.<br>
+
+   <p align="center">
+     <img src="img/New_Project_Status_Save.png" alt="New Project Status Save">
+   </p>
+   <br><br>
+
+<a id="section2"></a>
+
+## Status Segmentation
+
+1. On the same page, click "Status Segmentation".
      
-     <p align="center">
-       <img src="img/Wizard_Sidebar.png" alt="Wizard Sidebar">
-     </p>
+   <p align="center">
+     <img src="img2/Project_Status_Segmentation_Step_1.png" alt="Project Status Segmentation Step 1">
+   </p>
+
+2. Click on the project category you want to add the to-do list.<br>
+
+   <p align="center">
+     <img src="img2/Project_Status_Segmentation_Step_2.png" alt="Project Status Segmentation Step 2">
+   </p>
+
+3. Tick on the box of the to-do list and select the visibility of the to-do list.
+
+   <p align="center">
+     <img src="img2/Project_Status_Segmentation_Step_3.png" alt="Project Status Segmentation Step 3">
+   </p>
+
+   *Note: Visibility determines who can see the to-do list and who must complete the to-do list before changing the status.<br>
   
-  2. Click "Project".<br>
+4. Click on the "Save Changes" button.
 
-     <p align="center">
-       <img src="img/Project_In_Wizard.png" alt="Project in Wizard">
-     </p>
-     
-  3. Click "Status".<br>
+   <p align="center">
+     <img src="img2/Project_Status_Segmentation_Step_4.png" alt="Project Status Segmentation Step 4">
+   </p>
+  
+5. Your to-do list segmentation is successfully saved when the “Saved” prompt appears.
 
-     <p align="center">
-       <img src="img/Project_Status_In_Wizard.png" alt="Project Status in Wizard">
-     </p>
+   <p align="center">
+     <img src="img2/Project_Status_Segmentation_Step_5.png" alt="Project Status Segmentation Step 5">
+   </p>
 
-  4. Click on the "Add New Status" button.<br>
+6. For example, when the to-do list is ticked for "Sales" Project with the status "Negotiation", the to-do list box will be displayed in the project as below.
 
-     <p align="center">
-       <img src="img/Add_New_Project_Status_Button.png" alt="Add New Project Status Button">
-     </p>
-
-  5. To add a new status for the Contract Expired Project, please follow these steps:<br>
-
-     | Terms | Meaning |
-     |-------|---------|
-     | Name | Assign a name to the status (E.g. Contract Expired). |
-     | Edit Access | Define who can edit the Contract Expired Project when it's in this status (E.g. If the status is "Contract Expired", only specific users can make edits). |
-     | Status Modification | Specify who can change the project's status (E.g. Only certain users can modify the project's status when it's "Contract Expired"). |
-     | Digital Form Creation | Specify who can create digital form for the project when it's in this status (E.g. If the status is "Contract Expired", only specific users can create digital form). |
-     | Status Type | Categorize the status for more manageable system administration, For this example, you can select "Cancelled". |
-     | Color | Pick a color to represent the status in the system for easy reference. |
-
-     <p align="center">
-       <img src="img/New_Project_Status_Name.png" alt="New Project Status Name">
-     </p>
-
-  7. Click the "Submit" button.<br>
-
-     <p align="center">
-       <img src="img/New_Project_Status_Submit_Button.png" alt="New Project Status Submit Button">
-     </p>
-
-  8. Remember to click the "Save" button to save the new status.<br>
-
-     <p align="center">
-       <img src="img/New_Project_Status_Save_Button.png" alt="New Project Status Save Button">
-     </p>
-
-  9. Click "OK" and the new project status has been saved successfully.<br>
-
-     <p align="center">
-       <img src="img/New_Project_Status_Save.png" alt="New Project Status Save">
-     </p>
-     <br><br><br>
+   <p align="center">
+     <img src="img2/Project_Status_Segmentation_Step_6.png" alt="Project Status Segmentation Step 6">
+   </p>
+   <br><br><br>
 
 **Related Articles**<br>
 - [How Do I Add New Category in Customer/Project/Job?](Add_New_Category_in_Customer_Project_Job.md)
 - [How Do I Add New Status in Digital Form?](Add_New_Status_in_Digital_Form.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_New_Status_in_Customer_Project_Job.html) -->
  ~ Version 1.0<br>
 Created: 27 May 2024<br>
 Updated: 27 May 2024<br>
@@ -1419,6 +1706,8 @@ Updated: 27 May 2024<br>
 **Related Articles**<br>
 - [How Do I Add New Category in Customer/Project/Job?](Add_New_Category_in_Customer_Project_Job.md)
 - [How Do I Add New Status in Customer/Project/Job?](Add_New_Status_in_Customer_Project_Job.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_New_Status_in_Digital_Form.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -1478,6 +1767,8 @@ Updated: 24 May 2024<br>
 - [How to Add New User Category?](Add_New_User_Category.md)
 - [How to Assist My New User to Login?](New_User_Login.md)
 - [How to Login Into Sales Connection Using Mobile and Desktop?](Login.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_New_User.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -1528,7 +1819,11 @@ Updated: 24 May 2024<br>
 - [How to Add New User?](Add_New_User.md)
 - [How Do I Add New Category in Customer/Project/Job?](Add_New_Category_in_Customer_Project_Job.md)
 
- ~ ## How to Add Overtime Claim?
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_New_User_Category.html) -->
+ ~ Version 1.0<br>
+Created: 16 July 2024<br>
+Updated: 16 July 2024<br>
+## How to Add Overtime Claim?
 
 Utilize the overtime claim function to capture the extra hours your team has put in to complete the job.<br><br>
 
@@ -1620,8 +1915,9 @@ Utilize the overtime claim function to capture the extra hours your team has put
 **Related Articles**
 - [Claim Management](Claim_Management.md)
 - [Overtime Management](Overtime_Management.md)
-- [Attendance List](Attendance_List.md)
 - [Office Check-In Settings](Office_Check_In_Settings.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Add_Overtime_Claim.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -1657,6 +1953,8 @@ Updated: 24 May 2024<br>
 - [I Forgot to Check Out, How?](Assist_Check_Out.md)
 - [How to Enable Assist Check Out?](Enable_Assist_Check_Out.md)
 - [I am at the location, but the system says I am too far from the location.](Check_In_Address.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Adjust_Geofencing_Radius.html) -->
  ~ Version 1.0<br>
 Created: 14 June 2024<br>
 Updated: 14 June 2024<br>
@@ -1905,6 +2203,7 @@ Updated: 14 June 2024<br>
 - [How Do I Delete/Deactivate a Resigned User or Change to a New User?](Delete,_Deactivate_or_Change_User.md)
 - [How to Copy Account for New User?](Copy_Account.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Admin_Reset_App_Access.html) -->
  ~ Version 1.0<br>
 Created: 26 June 2024<br>
 Updated: 26 June 2024<br>
@@ -1993,6 +2292,8 @@ Data in Column C must be Unique and is compulsory to fill in.
 **Related Articles**<br>
 - [How to Add New Asset?](How_to_Add_New_Asset.md)
 - [How to do Customer/Project/Product/Services/UOM Bulk Update?](Customer_Bulk_Update.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Asset_Bulk_Update.html) -->
  ~ Version 1.0<br>
 Created: 11 July 2024<br> 
 Updated: 11 July 2024<br>
@@ -2304,6 +2605,7 @@ Updated: 11 July 2024<br>
 - [How to Add New Asset?](How_to_Add_New_Asset.md)
 - [Job Dashboard](Job_Dashboard.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Asset_Dashboard.html) -->
  ~ Version 1.0<br>
 Created: 23 May 2024<br>
 Updated: 7 June 2024<br>
@@ -2379,6 +2681,8 @@ Updated: 7 June 2024<br>
 **Related Articles**
 - [How to Enable Assist Check Out?](Enable_Assist_Check_Out.md)
 - [I am at the location, but the system says I am too far from the location.](Check_In_Address.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Assist_Check_Out.html) -->
  ~ ## Attendance List
 
 **Attendance List** tracks employee check-ins and check-outs for business travel. It includes details such as check-in dates, check-out dates, times, customer visits, total duration of check-ins, and non-check-in times, helping to monitor and manage employees' travel and attendance records.<br><br>
@@ -2568,6 +2872,416 @@ Updated: 7 June 2024<br>
 **Related Articles**
 - [Office Check-In Settings](Office_Check_In_Settings.md)
 - [Wizard Page](Wizard_Page.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Attendance_List.html) -->
+ ~ ## Business Travel (List)
+
+**Business Travel (List)** displays a list of business travel activities for users, including check-in and check-out events. It helps track and manage business travel logs, ensuring all required actions and comments are fulfilled before status changes.<br><br>
+
+**Navigate to the section by clicking it.**<br>
+
+- [Filter](#section1)<br>
+- [Favourite Filter](#section2)<br>
+- [Default Filter](#section3)<br>
+- [Clear All Filter](#section4)<br>
+- [Refresh](#section5)
+<br><br><br>
+
+1. At the desktop site navigation bar, go to Business Map > Business Travel (List).<br>
+   **Open Business Travel (List) Here:** [https://salesconnection.my/business-travel/list](https://salesconnection.my/business-travel/list)<br>
+
+   <p align="center">
+      <img src="img2/Business_Travel_List_Page.png" alt="Business Travel List Page">
+   </p>
+   <br><br>
+   
+<a id="section1"></a>
+
+### Filter
+
+1. Click "Business Travel Date Range".
+
+   <p align="center">
+      <img src="img2/Business_Travel_List_Filter_Step_1.png" alt="Business Travel List Filter Step 1">
+   </p>
+  
+2. Choose the date range you want to see.
+
+   <p align="center">
+      <img src="img2/Business_Travel_List_Filter_Step_2.png" alt="Business Travel List Filter Step 2">
+   </p>
+   
+3. Click on the "Done" button.
+
+   <p align="center">
+      <img src="img2/Business_Travel_List_Filter_Step_3.png" alt="Business Travel List Filter Step 3">
+   </p>
+
+4. Click "Filter By User".
+
+   <p align="center">
+      <img src="img2/Business_Travel_List_Filter_Step_4.png" alt="Business Travel List Filter Step 4">
+   </p>
+
+5. Search the user's name.
+
+   <p align="center">
+      <img src="img2/Business_Travel_List_Filter_Step_5.png" alt="Business Travel List Filter Step 5">
+   </p>
+  
+6. Tick the box of the user.
+
+   <p align="center">
+      <img src="img2/Business_Travel_List_Filter_Step_6.png" alt="Business Travel List Filter Step 6">
+   </p>
+  
+7. Click on the "Save" button.
+
+   <p align="center">
+      <img src="img2/Business_Travel_List_Filter_Step_7.png" alt="Business Travel List Filter Step 7">
+   </p>
+  
+8. Click "Show only travel with claim".
+
+   <p align="center">
+      <img src="img2/Business_Travel_List_Filter_Step_8.png" alt="Business Travel List Filter Step 8">
+   </p>
+  
+9. Select the filter value you want.
+
+   <p align="center">
+      <img src="img2/Business_Travel_List_Filter_Step_9.png" alt="Business Travel List Filter Step 9">
+   </p>
+
+10. The result of the filter will be shown as below.
+
+    <p align="center">
+      <img src="img2/Business_Travel_List_Filter_Step_10.png" alt="Business Travel List Filter Step 10">
+    </p>
+    <br><br>
+   
+<a id="section2"></a>
+
+### Favourite Filter
+
+1. Click "Favourite Filter".
+
+   <p align="center">
+    <img src="img2/Business_Travel_List_Favourite_Filter_Step_1.png" alt="Business Travel List Favourite Filter Step 1">
+   </p>
+  
+2. Click "+ Add".
+
+   <p align="center">
+    <img src="img2/Business_Travel_List_Favourite_Filter_Step_2.png" alt="Business Travel List Favourite Filter Step 2">
+   </p>
+
+3. Enter the name of the favourite filter.
+
+   <p align="center">
+    <img src="img2/Business_Travel_List_Favourite_Filter_Step_3.png" alt="Business Travel List Favourite Filter Step 3">
+   </p>
+  
+4. Click on the "Save" button.
+
+   <p align="center">
+    <img src="img2/Business_Travel_List_Favourite_Filter_Step_4.png" alt="Business Travel List Favourite Filter Step 4">
+   </p>
+  
+5. The favourite filter has been saved successfully.
+
+   <p align="center">
+    <img src="img2/Business_Travel_List_Favourite_Filter_Step_5.png" alt="Business Travel List Favourite Filter Step 5">
+   </p>  
+   <br><br>
+   
+<a id="section3"></a>
+
+### Default Filter
+
+1. Click "Favourite Filter".
+
+   <p align="center">
+    <img src="img2/Business_Travel_List_Default_Filter_Step_1.png" alt="Business Travel List Default Filter Step 1">
+   </p>
+  
+2. Click "Default Filter".
+
+   <p align="center">
+    <img src="img2/Business_Travel_List_Default_Filter_Step_2.png" alt="Business Travel List Default Filter Step 2">
+   </p>
+
+3. Click on the favourite filter you want to set as default filter.
+
+   <p align="center">
+    <img src="img2/Business_Travel_List_Default_Filter_Step_3.png" alt="Business Travel List Default Filter Step 3">
+   </p>
+  
+4. The default filter has been saved successfully.
+
+   <p align="center">
+    <img src="img2/Business_Travel_List_Default_Filter_Step_4.png" alt="Business Travel List Default Filter Step 4">
+   </p>
+   <br><br>
+   
+<a id="section4"></a>
+
+### Clear All Filter
+
+1. If you want to clear all filters that you have applied manually, click "Clear All" and all filters will be cleared.
+
+   <p align="center">
+     <img src="img2/Business_Travel_List_Clear_All_Filter_Step_1.png" alt="Business Travel List Clear All Filter Step 1">
+   </p>  
+   <br><br>
+   
+<a id="section5"></a>
+
+### Refresh
+
+1. Click the "Refresh" button to ensure all the information is the latest.
+
+   <p align="center">
+     <img src="img2/Business_Travel_List_Refresh_Step_1.png" alt="Business Travel List Refresh Step 1">
+   </p>  
+   <br><br><br>
+
+**Related Articles**
+- [Business Travel (Table)](Business_Travel_Table.md)
+- [Claim Management](Claim_Management.md)
+- [Overtime Management](Overtime_Management.md)
+- [Attendance List](Attendance_List.md)
+- [Office Check-In Settings](Office_Check_In_Settings.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Business_Travel_List.html) -->
+ ~ ## Business Travel (Table)
+
+**Business Travel (Table)** page displays a detailed table of business travel records, including information such as dates, users, check-in and check-out times, GPS accuracy, notes, and travel reports. It allows users to filter records, export data, and view individual travel reports for efficient tracking and management of business travel activities.<br><br>
+
+**Navigate to the section by clicking it.**<br>
+
+- [Default Columns](#section1)<br>
+- [Filter](#section2)<br>
+- [Favourite Filter](#section3)<br>
+- [Default Filter](#section4)<br>
+- [Clear All Filter](#section5)<br>
+- [Refresh](#section6)<br>
+- [Export](#section7)
+<br><br><br>
+
+1. At the desktop site navigation bar, go to Business Map > Business Travel (Table).<br>
+   **Open Business Travel (Table) Here:** [https://salesconnection.my/business-travel/table](https://salesconnection.my/business-travel/table)<br>
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Page.png" alt="Business Travel Table Page">
+   </p>
+   <br><br>
+   
+<a id="section1"></a>
+
+### Default Columns
+
+1. Click "Default Columns".
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Default_Columns_Step_1.png" alt="Business Travel Table Default Columns Step 1">
+   </p>
+  
+2. Click "+ Create".
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Default_Columns_Step_2.png" alt="Business Travel Table Default Columns Step 2">
+   </p>
+   
+3. Select the columns you want to add.
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Default_Columns_Step_3.png" alt="Business Travel Table Default Columns Step 3">
+   </p>
+
+4. Click on the "Save" button.
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Default_Columns_Step_4.png" alt="Business Travel Table Default Columns Step 4">
+   </p>
+
+5. The default column has been saved successfully.
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Default_Columns_Step_5.png" alt="Business Travel Table Default Columns Step 5">
+   </p>
+   <br><br>
+   
+<a id="section2"></a>
+
+### Filter
+  
+1. Click on the filter you want to change. For example, click "Business Travel Date Range".
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Filter_Step_1.png" alt="Business Travel Table Filter Step 1">
+   </p>
+  
+2. Click on the filter value you want.
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Filter_Step_2.png" alt="Business Travel Table Filter Step 2">
+   </p>
+  
+3. Click on the "Done" button.
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Filter_Step_3.png" alt="Business Travel Table Filter Step 3">
+   </p>
+  
+4. To filter other value, click "Filter Business Travel Record".
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Filter_Step_4.png" alt="Business Travel Table Filter Step 4">
+   </p>
+
+5. Click on the group you want to filter.
+
+   <p align="center">
+     <img src="img2/Business_Travel_Table_Filter_Step_5.png" alt="Business Travel Table Filter Step 5">
+   </p>
+
+6. Click "Filter Variable" you want to filter.
+
+   <p align="center">
+      <img src="img2/Business_Travel_Table_Filter_Step_6.png" alt="Business Travel Table Filter Step 6">
+   </p>
+
+7. Click on the "Operator".
+
+   <p align="center">
+     <img src="img2/Business_Travel_Table_Filter_Step_7.png" alt="Business Travel Table Filter Step 7">
+   </p>
+
+8. Select the "Filter Value" you want.
+
+   <p align="center">
+     <img src="img2/Business_Travel_Table_Filter_Step_8.png" alt="Business Travel Table Filter Step 8">
+   </p>
+
+9. Click on the "Done" button.
+
+   <p align="center">
+     <img src="img2/Business_Travel_Table_Filter_Step_9.png" alt="Business Travel Table Filter Step 9">
+   </p>
+
+10. The filter result will be shown as below.
+
+    <p align="center">
+      <img src="img2/Business_Travel_Table_Filter_Step_10.png" alt="Business Travel Table Filter Step 10">
+    </p>
+   <br><br>
+   
+<a id="section3"></a>
+
+### Favourite Filter
+
+1. Click "Favourite Filter".
+
+   <p align="center">
+    <img src="img2/Business_Travel_Table_Favourite_Filter_Step_1.png" alt="Business Travel Table Favourite Filter Step 1">
+   </p>
+  
+2. Click "+ Add".
+
+   <p align="center">
+    <img src="img2/Business_Travel_Table_Favourite_Filter_Step_2.png" alt="Business Travel Table Favourite Filter Step 2">
+   </p>
+
+3. Enter the name of the favourite filter.
+
+   <p align="center">
+    <img src="img2/Business_Travel_Table_Favourite_Filter_Step_3.png" alt="Business Travel Table Favourite Filter Step 3">
+   </p>
+  
+4. Click on the "Save" button.
+
+   <p align="center">
+    <img src="img2/Business_Travel_Table_Favourite_Filter_Step_4.png" alt="Business Travel Table Favourite Filter Step 4">
+   </p>
+  
+5. The favourite filter has been saved successfully.
+
+   <p align="center">
+    <img src="img2/Business_Travel_Table_Favourite_Filter_Step_5.png" alt="Business Travel Table Favourite Filter Step 5">
+   </p>  
+   <br><br>
+   
+<a id="section4"></a>
+
+### Default Filter
+
+1. Click "Favourite Filter".
+
+   <p align="center">
+    <img src="img2/Business_Travel_Table_Default_Filter_Step_1.png" alt="Business Travel Table Default Filter Step 1">
+   </p>
+  
+2. Click "Default Filter".
+
+   <p align="center">
+    <img src="img2/Business_Travel_Table_Default_Filter_Step_2.png" alt="Business Travel Table Default Filter Step 2">
+   </p>
+
+3. Click on the favourite filter you want to set as default filter.
+
+   <p align="center">
+    <img src="img2/Business_Travel_Table_Default_Filter_Step_3.png" alt="Business Travel Table Default Filter Step 3">
+   </p>
+  
+4. The default filter has been saved successfully.
+
+   <p align="center">
+    <img src="img2/Business_Travel_Table_Default_Filter_Step_4.png" alt="Business Travel Table Default Filter Step 4">
+   </p>
+   <br><br>
+   
+<a id="section5"></a>
+
+### Clear All Filter
+
+1. If you want to clear all filters that you have applied manually, click "Clear All" and all filters will be cleared.
+
+   <p align="center">
+     <img src="img2/Business_Travel_Table_Clear_All_Filter_Step_1.png" alt="Business Travel Table Clear All Filter Step 1">
+   </p>  
+   <br><br>
+   
+<a id="section6"></a>
+
+### Refresh
+
+1. Click the "Refresh" button to ensure all the information is the latest.
+
+   <p align="center">
+     <img src="img2/Business_Travel_Table_Refresh_Step_1.png" alt="Business Travel Table Refresh Step 1">
+   </p>  
+   <br><br>
+   
+<a id="section7"></a>
+
+### Export
+
+1. Click the "Export" button to export the Business Travel Record.
+
+   <p align="center">
+     <img src="img2/Business_Travel_Table_Export_Step_1.png" alt="Business Travel Table Export Step 1">
+   </p>  
+   <br><br><br>
+
+**Related Articles**
+- [Business Travel (List)](Business_Travel_List.md)
+- [Claim Management](Claim_Management.md)
+- [Overtime Management](Overtime_Management.md)
+- [Attendance List](Attendance_List.md)
+- [Office Check-In Settings](Office_Check_In_Settings.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Business_Travel_Table.html) -->
  ~ Version 1.0<br>
 Created: 23 May 2024<br>
 Updated: 23 May 2024<br>
@@ -2625,7 +3339,86 @@ Updated: 23 May 2024<br>
 - [How to Edit Checklist Dropdown Options?](Edit_Checklist_Dropdown_Options.md)
 - [How Do I Add New Status in Digital Form?](Add_New_Status_in_Digital_Form.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Can't_Access_Digital_Form.html) -->
+ ~ ## Why I Cannot Find my Project?
+
+A **Project** in Sales Connection serves as a folder to organize and manage both external and internal services, and as a contract for easy recognition and tracking of tasks and progress.<br><br>
+
+1. At the desktop's navigation bar, go to User Management > User Account Customisation.<br>
+   **Open User Account Customisation Page Here:** [https://salesconnection.my/uac](https://salesconnection.my/uac)<br>
    
+   <p align="center">
+     <img src="img2/Cant_Find_Project_Step_1.png" alt="Cant Find Project Step 1">
+   </p>
+
+   *Note: You must have access to User Management menu to perform this action. Please request permission or help from your admin if you do not have access to the menu.<br>
+
+2. Click the “pencil” icon beside "Company Settings".
+
+   <p align="center">
+     <img src="img2/Cant_Find_Project_Step_2.png" alt="Cant Find Project Step 2">
+   </p>
+
+3. Click "Control Settings".
+
+   <p align="center">
+     <img src="img2/Cant_Find_Project_Step_3.png" alt="Cant Find Project Step 3">
+   </p>
+
+4. Scroll down to "Project Settings for Users".
+
+   <p align="center">
+     <img src="img2/Cant_Find_Project_Step_4.png" alt="Cant Find Project Step 4">
+   </p>
+
+5. Select the option you want.
+
+   <p align="center">
+     <img src="img2/Cant_Find_Project_Step_5.png" alt="Cant Find Project Step 5">
+   </p>
+
+6. Click "Save Control Settings".
+
+   <p align="center">
+     <img src="img2/Cant_Find_Project_Step_6.png" alt="Cant Find Project Step 6">
+   </p>
+
+7. Click "All Users".
+
+   <p align="center">
+     <img src="img2/Cant_Find_Project_Step_7.png" alt="Cant Find Project Step 7">
+   </p>
+
+8. Click on the "Save" button.
+
+   <p align="center">
+     <img src="img2/Cant_Find_Project_Step_8.png" alt="Cant Find Project Step 8">
+   </p>
+
+9. The project selection was saved successfully when this prompt appeared.
+
+   <p align="center">
+     <img src="img2/Cant_Find_Project_Step_9.png" alt="Cant Find Project Step 9">
+   </p>
+   <br><br>
+
+**Project Settings for Users**
+
+| Terms | Description |
+|-------|-------------|
+| Project Selection Required | Users must select a specific project before proceeding with any actions or tasks. |
+| Project Selection Optional: Set a default Project manually | Users can manually set a default project, but selecting a project is optional for tasks and actions. |
+| Project Selection Optional: Latest Project created as default Project | If no project is selected, the system will automatically use the latest created project as the default, but users can still select a different project if needed. |
+| No Project Selection: Selected default Project automatically chosen | The system will automatically use a pre-selected default project for all tasks and actions, without requiring users to select a project. |
+| No Project Selection: Latest Project created as default Project | The system will automatically set the latest created project as the default for all tasks and actions, without requiring users to select a project. |
+
+*Note: "No Project Selection" will cause all the items relevant to Project to be invisible.
+
+<br><br><br>
+
+**Related Articles**
+- [Project Schedule Page](Project_Schedule_Page.md)
+- [How to Add New Project?](Add_New_Project.md)
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -2656,6 +3449,8 @@ Updated: 24 May 2024<br>
 
 **Related Articles**<br>
 - [My updates are not received by my admin and other team menbers. Why?](Updates_Not_Received_by_Team_Members.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Can't_Load_Schedule_Page.html) -->
  ~ Version 1.0<br>
 Created: 23 May 2024<br>
 Updated: 23 May 2024<br>
@@ -2749,6 +3544,8 @@ Updated: 23 May 2024<br>
 **Related Articles**
 - [How to Login Into Sales Connection Using Mobile and Desktop?](Login.md)
 - [I forgot my password. How can I recover or reset it?](Forgot_Password.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Change_Account_Password.html) -->
  ~ Version 1.0<br>
 Created: 27 May 2024<br>
 Updated: 27 May 2024<br>
@@ -3003,9 +3800,14 @@ Updated: 27 May 2024<br>
 **Related Articles**<br>
 - [I Forgot to Check Out, How?](Assist_Check_Out.md)
 - [How to Enable Assist Check Out?](Enable_Assist_Check_Out.md)
- ~ ## How to Check Pending Data?
 
-Revise to this: Pending data is usually used to check if a user has informed that a comment has been showing as pending for a long time in job details page. In such cases, support team will require user to take screenshot of the pending data so the team can check on it. (As shown below) 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Check_In_Address.html) -->
+ ~ Version 1.0<br>
+Created: 18 July 2024<br>
+Updated: 18 July 2024<br>
+## How to Check Pending Data?
+
+Pending data is usually used to check if a user has informed that a comment has been showing as pending for a long time in job details page. In such cases, support team will require user to take screenshot of the pending data so the team can check on it. (As shown below) 
 
    <p align="center">
       <img src="img/Pending_Data_Problem.png" alt="Pending Data Problem" width="280" height="550">
@@ -3046,7 +3848,7 @@ Revise to this: Pending data is usually used to check if a user has informed tha
 - [My updates are not received by my admin and other team members. Why?](Updates_Not_Received_by_Team_Members.md)
 - [How to check if my staff have any pending updates?](Check_Pending_Update.md)
 
-
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Check_Pending_Data.html) -->
  ~ Version 1.0<br>
 Created: 9 July 2024<br>
 Updated: 9 July 2024<br>
@@ -3117,6 +3919,9 @@ Check on any pending upload item(s) by each of your user. If you receive a messa
 **Related Articles**
 - [How Does an Admin Reset App Access for a User?](Admin_Reset_App_Access.md)
 - [My updates are not received by my admin and other team members. Why?](Updates_Not_Received_by_Team_Members.md)
+- [How to Check Pending Data?](Check_Pending_Data.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Check_Pending_Update.html) -->
  ~ Version 1.0<br>
 Created: 16 July 2024<br>
 Updated: 16 July 2024<br>
@@ -3381,9 +4186,15 @@ Updated: 16 July 2024<br>
    <br><br><br>
 
 **Related Articles**
+- [How to Add Claim?](Add_Claim.md)
 - [Overtime Management](Overtime_Management.md)
 - [Office Check-In Settings](Office_Check_In_Settings.md)
- ~ ## Comment Category Segmentation
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Claim_Management.html) -->
+ ~ Version 1.0<br>
+Created: 22 July 2024<br>
+Updated: 22 July 2024<br>
+## Comment Category Segmentation
 
 **Comment Category Segmentation** page separates Comment options by different categories for Projects, Jobs, etc. Example: Only Sales Meeting Job will have “Sales Meeting Minutes” Comment option. This option can be set to not be available for other Job categories.<br><br>
 
@@ -3465,6 +4276,7 @@ Updated: 16 July 2024<br>
 **Related Articles**
 - [Wizard Page](Wizard_Page.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Comment_Category_Segmentation.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -3588,7 +4400,7 @@ Updated: 24 May 2024<br>
 **Related Articles**
 - [My updates are not received by my admin and other team members. Why?](Updates_Not_Received_by_Team_Members.md)
 
-  
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Comment_With_Photo.html) -->
  ~ Version 1.0<br>
 Created: 4 July 2024<br>
 Updated: 4 July 2024<br>
@@ -3707,7 +4519,11 @@ On **Company Profile Settings**, you would be able to change the system settings
 **Related Articles**
 - [UAC Policy Management](UAC_Policy_Management.md)
 - [Office Check-In Settings](Office_Check_In_Settings.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Company_Profile_Settings.html) -->
  ~ ## How to Configure Public Form Access in UAC?
+
+Decide on which team members should have access on reviewing public form submissions and take action towards it through the access control.<br><br>
 
 1. At the desktop site's navigation bar, go to User Management > User Account Customization.<br>
    **Open User Account Customization:** [https://salesconnection.my/uac](https://salesconnection.my/uac)<br>
@@ -3772,6 +4588,8 @@ On **Company Profile Settings**, you would be able to change the system settings
 - [How to Set Customized Favourite Filter as Default - App ](Default_Favourite_Filter_App.md)
 - [How to Set Up the Column View in the Report Page?](How_to_Set_Up_the_Column_View_in_the_Report_Page.md)
 - [How to Use Update Report Filter?](Job_Update_Report_Filter.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Configure_Public_Form_Access_in_UAC.html) -->
  ~ ## How to Copy Account for New User?
     
   1. At the desktop site's navigation bar, go to User Management > Copy Account.<br>
@@ -3842,6 +4660,8 @@ On **Company Profile Settings**, you would be able to change the system settings
 - [How to Add New User?](Add_New_User.md)
 - [How to Assist My New User to Login?](New_User_Login.md)
 - [How to Login Into Sales Connection Using Mobile and Desktop?](Login.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Copy_Account.html) -->
  ~ Version 1.0<br>
 Created: 16 July 2024<br>
 Updated: 16 July 2024<br>
@@ -4160,6 +4980,8 @@ You and your team can start creating the digitalised form(s) in the system throu
 - [How to Add New Job?](Add_New_Job.md)
 - [How to Add New Asset?](How_to_Add_New_Asset.md)
 - [How to Generate and Share QR Code for Public Form?](Creation_of_Public_Form.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Create_Digital_Form.html) -->
  ~ ## How to Set Up Digital Form PDF Template?
 
 **Navigate to the section by clicking it.**<br>
@@ -4403,7 +5225,12 @@ You and your team can start creating the digitalised form(s) in the system throu
 - [How to Create Digital Form?](Create_Digital_Form.md)
 - [Digital Form Template Settings](Digital_Form_Template_Settings.md)
 - [How to Generate and Share QR Code for Public Form?](Creation_of_Public_Form.md)
- ~ ## How to Create New Reminder Template and do Autopopulate Setting?
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Create_PDF.html) -->
+ ~ Version 1.0<br>
+Created: 16 July 2024<br>
+Updated: 16 July 2024<br>
+## How to Create New Reminder Template and do Autopopulate Setting?
 
 Reminders serve as a digital assistant for you and your team to keep track of your daily tasks, important projects, milestones and many more depending on how you and the team have configured it.<br><br>
 
@@ -4425,7 +5252,7 @@ Reminders serve as a digital assistant for you and your team to keep track of yo
 
    *Note: You must have access to Template Settings menu to perform this action. Please request permission or help from your admin if you do not have access to the menu.<br>
 
-2. Select the category that you would like to include the reminder in.
+2. Click on the Category section to expand.
 
    <p align="center">
      <img src="img/Create_Reminder_Template_Step_2.png" alt="Create Reminder Template Step 2">
@@ -4483,9 +5310,7 @@ Reminders serve as a digital assistant for you and your team to keep track of yo
      <img src="img/Create_Reminder_Template_Step_8.png" alt="Create Reminder Template Step 8">
    </p>
 
-
-
-2. Click on the category you want to include the new reminder in.<br>
+2. Select the category that you would like to include the reminder in.<br>
 
    <p align="center">
      <img src="img/Create_Reminder_Template_Step_9.png" alt="Create Reminder Template Step 9">
@@ -4512,6 +5337,8 @@ Reminders serve as a digital assistant for you and your team to keep track of yo
 
 **Related Articles**
 - [How to Edit Reminder Template?](Edit_Reminder_Template.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Create_Reminder_Template.html) -->
  ~ Version 1.0<br>
 Created: 9 July 2024<br>
 Updated: 9 July 2024<br>
@@ -4743,6 +5570,8 @@ Updated: 9 July 2024<br>
 
 **Related Articles**
 - [How to Create Digital Form?](Create_Digital_Form.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Creation_of_Public_Form.html) -->
  ~ Version 1.0<br>
 Created: 11 July 2024<br>
 Updated: 11 July 2024<br>
@@ -4836,6 +5665,8 @@ Updated: 11 July 2024<br>
 - [How do I Import New User(s)?](Import_User.md)
 - [How do I Import New Contact(s)?](Import_Contact.md)
 - [How to do Asset Bulk Update?](Asset_Bulk_Update.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Customer_Bulk_Update.html) -->
  ~ Version 1.0<br>
 Created: 4 July 2024<br>
 Updated: 4 July 2024<br>
@@ -5134,6 +5965,7 @@ Updated: 4 July 2024<br>
 - [How to Add New Customer?](Add_New_Customer.md)
 - [Product/Services List](Product_Services_List.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Customer_List.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -5155,6 +5987,7 @@ Updated: 24 May 2024<br>
 **Related Articles**
 - [User Type Default Access](User_Types_Default_Access.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Data_Level_Structure.html) -->
  ~ Version 1.0<br>
 Created: 23 May 2024<br>
 Updated: 23 May 2024<br>
@@ -5201,6 +6034,8 @@ Updated: 23 May 2024<br>
 - [How to Set Customized Favourite Filter as Default - App ](Default_Favourite_Filter_App.md)
 - [How to Set Up the Column View in the Report Page?](How_to_Set_Up_the_Column_View_in_the_Report_Page.md)
 - [How to Use Update Report Filter?](Job_Update_Report_Filter.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Default_Favourite_Filter.html) -->
  ~ Version 1.0<br>
 Created: 23 May 2024<br>
 Updated: 23 May 2024<br>
@@ -5244,6 +6079,7 @@ Updated: 23 May 2024<br>
 - [How to Set Up the Column View in the Report Page?](How_to_Set_Up_the_Column_View_in_the_Report_Page.md)
 - [How to Use Update Report Filter?](Job_Update_Report_Filter.md)
   
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Default_Favourite_Filter_App.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -5402,6 +6238,8 @@ Updated: 24 May 2024<br>
 - [How to Add New User?](Add_New_User.md)
 - [How to Assist My New User to Login?](New_User_Login.md)
 - [How to Login Into Sales Connection Using Mobile and Desktop?](Login.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Delete,_Deactivate_or_Change_User.html) -->
  ~ ## Why is the Console Tab showing a different number of jobs for the same customer?
 
 ### Here are the potential issues and solutions:
@@ -5422,12 +6260,12 @@ a. Different user types will affect job visibility. Contact your admin for user 
 
    | User Type | Description |
    |-----------|-------------|
-   | Main Admin | The account holder. |
    | Admin | Can access everything in the system. |
-   | Sub-Admin | Can see everything within the department. |
-   | Staff | Can access within the department with some limitations. |
-   | Associate User | Limited access. |
-
+   | Sub-Admin | Can see all Jobs within the department. |
+   | Staff/Associate User | Can only see their own Jobs. |
+   
+   *Note: These are based on Default Access. Your account may have specific settings. Please check with your Admin if your settings are different from the Default.<br>
+   
    **Click here to know more about user type:** [User Type Default Access](User_Types_Default_Access.md)<br>
    <br>
      
@@ -5446,6 +6284,8 @@ a. Different user types will affect job visibility. Contact your admin for user 
 
 **Related Articles**<br>
 - [User Type Default Access](User_Types_Default_Access.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Different_Number_Jobs_For_Same_Customer.html) -->
  ~ ## Digital Form Template Settings
 
 The Digital Form Template Settings page enables users to **configure** and **manage** digital form templates comprehensively, providing flexibility and control over various business processes.<br>
@@ -5658,6 +6498,8 @@ The Digital Form Template Settings page enables users to **configure** and **man
 - [How to Set Up Digital Form PDF Template?](Create_PDF.md)
 - [How to Setup Job Template Page?](Setup_Job_Template.md)
 - [How to Setup Public Form Template Page?](Setup_Public_Form_Template_Page.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Digital_Form_Template_Settings.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -5755,6 +6597,9 @@ Updated: 24 May 2024<br>
 - [How to Assist My New User to Login?](New_User_Login.md)
 - [I Can't Login to My Other Phone. Why?](IMEI.md)
 - [My Staff Did Not Receive Their OTP. What Should I Do?](Not_Receiving_OTP.md)
+- [I am Not Getting Any Notification From the System On My Device. Why?](Not_Getting_Notification.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Disable_Notification.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -5861,6 +6706,7 @@ Updated: 24 May 2024<br>
 - [How to Add Dropdown Options in Digital Form?](Add_Dropdown_Options_in_Digital_Form.md)
 - [How to Use Dropdown Field in Job/Project/Customer?](How_to_Use_Dropdown_Field_in_Job_Project_Customer.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Edit_Checklist_Dropdown_Options.html) -->
  ~ Version 1.0<br>
 Created: 7 June 2024<br>
 Updated: 7 June 2024<br>
@@ -5935,6 +6781,8 @@ Updated: 7 June 2024<br>
 
 **Related Articles**
 - [I Get Spammed By a Lot of Notifications. How Do I Disable It?](Disable_Notification.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Edit_Reminder_Template.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -5982,6 +6830,7 @@ Updated: 24 May 2024<br>
 - [How to Request for Remote Signature From Customer?](How_to_Get_Remote_Signature_From_Customer.md)
 - [How to Sign and Upload Company Stamp into Digital Form？](Request_Signature_Company_Stamp.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Edit_Remote_Signature_Email_Template.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -6057,6 +6906,8 @@ Updated: 24 May 2024<br>
 **Related Articles**<br>
 - [I Forgot to Check Out, How?](Assist_Check_Out.md)
 - [I am at the location, but the system says I am too far from the location.](Check_In_Address.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Enable_Assist_Check_Out.html) -->
  ~ Version 1.0<br>
 Created: 28 June 2024<br>
 Updated: 28 June 2024<br>
@@ -6107,6 +6958,8 @@ Updated: 28 June 2024<br>
 **Related Articles**
 - [How to Login Into Sales Connection Using Mobile and Desktop?](Login.md)
 - [How to Assist My New User to Login?](New_User_Login.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Enable_Disable_Version_Access_Permission.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -6243,6 +7096,8 @@ Updated: 24 May 2024<br>
 **Related Articles**<br>
 - [How to Add Dropdown Options in Digital Form?](Add_Dropdown_Options_in_Digital_Form.md)
 - [How to Edit Checklist Dropdown Options?](Edit_Checklist_Dropdown_Options.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Export_Report.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -6407,7 +7262,7 @@ Updated: 24 May 2024<br>
 - [How to Login Into Sales Connection Using Mobile and Desktop?](Login.md)
 - [How to Change Account Password?](Change_Account_Password.md)
 
-
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Forgot_Password.html) -->
  ~ Version 1.0<br>
 Created: 18 June 2024<br>
 Updated: 18 June 2024<br>
@@ -6846,6 +7701,8 @@ Updated: 18 June 2024<br>
 - [How to Add New Job?](Add_New_Job.md)
 - [How to Create Digital Form?](Create_Digital_Form.md)
 - [How to Generate and Share QR Code for Public Form?](Creation_of_Public_Form.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/How_to_Add_New_Asset.html) -->
  ~ Version 1.0<br>
 Created: 18 June 2024<br>
 Updated: 18 June 2024<br>
@@ -7309,6 +8166,7 @@ Updated: 18 June 2024<br>
 - [How to Edit Remote Signature Email Template?](Edit_Remote_Signature_Email_Template.md)
 - [How to Sign and Upload Company Stamp into Digital Form？](Request_Signature_Company_Stamp.md)
   
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/How_to_Get_Remote_Signature_From_Customer.html) -->
  ~ ## ⏰ How to Set Personal Reminder?
 
 **Navigate to the section by clicking it.**<br>
@@ -7412,6 +8270,8 @@ Updated: 18 June 2024<br>
      <p align="center">
        <img src="img/App_Personal_Reminder_Step_15.png" alt="App Personal Reminder Step 15" width="280" height="550">
      </p><br>
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/How_to_Set_Personal_Reminder.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -7482,6 +8342,8 @@ Updated: 24 May 2024<br>
 - [How to Set Customized Favourite Filter as Default - Desktop ](Default_Favourite_Filter.md)
 - [How to Set Customized Favourite Filter as Default - App ](Default_Favourite_Filter_App.md)
 - [How to Use Update Report Filter?](Job_Update_Report_Filter.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/How_to_Set_Up_the_Column_View_in_the_Report_Page.html) -->
  ~ Version 1.0<br>
 Created: 18 June 2024<br>
 Updated: 18 June 2024<br>
@@ -7651,6 +8513,8 @@ Updated: 18 June 2024<br>
 **Related Articles**<br>
 - [How to Add Dropdown Options in Digital Form?](Add_Dropdown_Options_in_Digital_Form.md)
 - [How to Edit Checklist Dropdown Options?](Edit_Checklist_Dropdown_Options.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/How_to_Use_Dropdown_Field_in_Job_Project_Customer.html) -->
  ~ Version 1.0<br>
 Created: 23 May 2024<br>
 Updated: 31 May 2024<br>
@@ -7702,6 +8566,8 @@ Updated: 31 May 2024<br>
 - [My Staff Did Not Receive Their OTP. What Should I Do?](Not_Receiving_OTP.md)
 - [I Forgot to Check Out, How?](Assist_Check_Out.md)
 - [How to Enable Assist Check Out?](Enable_Assist_Check_Out.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/IMEI.html) -->
  ~ Version 1.0<br>
 Created: 18 June 2024<br>
 Updated: 18 June 2024<br>
@@ -7825,6 +8691,8 @@ Updated: 18 June 2024<br>
 - [How to Import New UOM(s)?](Import_UOM.md)
 - [How do I Import New User(s)?](Import_User.md)
 - [How to Import New Contact(s)?](Import_Contact.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Import_Asset.html) -->
  ~ Version 1.0<br>
 Created: 28 June 2024<br>
 Updated: 28 June 2024<br>
@@ -7931,6 +8799,8 @@ Updated: 28 June 2024<br>
 - [How do I Import New Asset(s)?](Import_Asset.md)
 - [How do I Import New UOM(s)?](Import_UOM.md)
 - [How do I Import New User(s)?](Import_User.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Import_Contact.html) -->
  ~ Version 1.0<br>
 Created: 19 June 2024<br>
 Updated: 19 June 2024<br>
@@ -8013,6 +8883,8 @@ Updated: 19 June 2024<br>
 - [How do I Import New Asset(s)?](Import_Asset.md)
 - [How to Import New UOM(s)?](Import_UOM.md)
 - [How to Import New Contact(s)?](Import_Contact.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Import_Customer.html) -->
  ~ Version 1.0<br>
 Created: 19 June 2024<br>
 Updated: 19 June 2024<br>
@@ -8083,6 +8955,7 @@ Updated: 19 June 2024<br>
 - [How do I Import New User(s)?](Import_User.md)
 - [How to Import New Contact(s)?](Import_Contact.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Import_Product_Services.html) -->
  ~ Version 1.0<br>
 Created: 24 June 2024<br>
 Updated: 24 June 2024<br>
@@ -8174,6 +9047,8 @@ Updated: 24 June 2024<br>
 - [How to Import New UOM(s)?](Import_UOM.md)
 - [How do I Import New User(s)?](Import_User.md)
 - [How to Import New Contact(s)?](Import_Contact.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Import_Project.html) -->
  ~ Version 1.0<br>
 Created: 26 June 2024<br>
 Updated: 26 June 2024<br>
@@ -8261,6 +9136,8 @@ Updated: 26 June 2024<br>
 - [How do I Import New Asset(s)?](Import_Asset.md)
 - [How do I Import New User(s)?](Import_User.md)
 - [How to Import New Contact(s)?](Import_Contact.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Import_UOM.html) -->
  ~ Version 1.0<br>
 Created: 14 June 2024<br>
 Updated: 14 June 2024<br>
@@ -8335,118 +9212,8 @@ Updated: 14 June 2024<br>
 - [How do I Import New Asset(s)?](Import_Asset.md)
 - [How to Import New UOM(s)?](Import_UOM.md)
 - [How to Import New Contact(s)?](Import_Contact.md)
- ~  ## I am not getting any notification from system. Why?
 
- **Navigate to the section by clicking it.**<br>
-
-- [Mobile Version](#section1)<br>
-- [Desktop Version](#section2)
-<br><br><br>
- 
- <a id="section1"></a>
-
-- **Mobile Version**:
-
-1. In Settings page of your phone, Select "Apps".
-
-    <p align="center">
-      <img src="img/Did_Not_Get_Any_Notification_From_System_Step_1.png" alt="Notification Setting Step 1" width="280" height="550">
-    </p>
-
-    *Note: Phone settings may vary depending on the phone model.<br>
-    
- 2. Click "Apps".
-
-    <p align="center">
-      <img src="img/Did_Not_Get_Any_Notification_From_System_Step_2.png" alt="Notification Setting Step 2" width="280" height="550">
-    </p><br>
-
- 3. Click "Sales Connection".
-
-    <p align="center">
-      <img src="img/Did_Not_Get_Any_Notification_From_System_Step_3.png" alt="Notification Setting Step 3" width="280" height="550">
-    </p><br>
-
- 4. Click "Notifications".
-
-    <p align="center">
-      <img src="img/Did_Not_Get_Any_Notification_From_System_Step_4.png" alt="Notification Setting Step 4" width="280" height="550">
-    </p><br>
-
- 5. Make sure the "Allow Notification" has been toggled.
-
-    <p align="center">
-      <img src="img/Did_Not_Get_Any_Notification_From_System_Step_5.png" alt="Notification Setting Step 5" width="280" height="550">
-    </p><br>
-     
-   <a id="section2"></a><br><br>
-
- - **Desktop Version**:
-
-*Note: Only certain admins can edit the notification settings. Please contact your admin if you wish to enable the notifications.<br>
- 
- 1. To enable notifications for users, go to desktop site navigation bar > User Management > User Account Customisation.<br>
-     **Open UAC Page Here:** [https://salesconnection.my/uac](https://salesconnection.my/uac)<br>
-     
-    <p align="center">
-      <img src="img/User_Account_Customisation.png" alt="User Account Customisation">
-    </p>
-     
- 2. Click on the department name.<br>
-  
-    <p align="center">
-      <img src="img/Select_Department_In_UAC.png" alt="Select Department in UAC">
-    </p>
-     
- 3. Enter the name of the user who needs to enable notification.<br>
-
-    <p align="center">
-      <img src="img/Enter_Name_For_Enable_Assisted_Checkout.png" alt="Enter Name for Enable Assisted Checkout">
-    </p>
-  
- 4. Click on the "Select Department" button.<br>
-
-    <p align="center">
-      <img src="img/Click_Select_Department_Button.png" alt="Click Select Department Button">
-    </p>
-
- 5. Click the "pencil" icon beside the user who needs to enable the notifications.<br>
-
-    <p align="center">
-       <img src="img/Click_Pencil_Icon.png" alt="Click Pencil Icon">
-    </p>
-
- 6. Click on the "Notification Settings".<br>
-
-    <p align="center">
-       <img src="img/Enable_Notification_In_UAC_Step_6.png" alt="Enable Notification in UAC Step 6">
-    </p>
-
- 7. Tick the boxes next to the notifications you want to receive. For example, select all the job notifications.
-
-    | Terms | Meaning |
-    |-------|---------|
-    | Noti | Push notifications that will appear on your device (such as your phone lock screen). |
-    | Email | Notifications sent to your email address. |
-    | Mention | Alerts when someone mentions you in a comment. |
-    | Assign | Notifications when a task or job is assigned to you. |
-    | View | Notifications for activities that require your view. |
-
-    <p align="center">
-       <img src="img/Enable_Notification_In_UAC_Step_7.png" alt="Enable Notification in UAC Step 7">
-    </p>
-
- 8. Click "Save Notification Settings".
-
-    <p align="center">
-       <img src="img/Enable_Notification_In_UAC_Step_8.png" alt="Enable Notification in UAC Step 8">
-    </p>
-
- 9. Notification settings are successfully updated once you see the “Settings Successfully Updated!” prompt appear.
-
-     <p align="center">
-       <img src="img/Enable_Notification_In_UAC_Step_9.png" alt="Enable Notification in UAC Step 9">
-     </p>
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Import_User.html) -->
  ~ Version 1.0<br>
 Created: 4 July 2024<br>
 Updated: 4 July 2024<br>
@@ -8774,6 +9541,8 @@ Updated: 4 July 2024<br>
 **Related Articles**
 - [How to Add New Job?](Add_New_Job.md)      
 - [Asset Dashboard](Asset_Dashboard.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Job_Dashboard.html) -->
  ~ Version 1.0<br>
 Created: 23 May 2024<br>
 Updated: 23 May 2024<br>
@@ -8863,6 +9632,8 @@ Updated: 23 May 2024<br>
 - [How to Set Customized Favourite Filter as Default - App ](Default_Favourite_Filter_App.md)
 - [How to Set Up the Column View in the Report Page?](How_to_Set_Up_the_Column_View_in_the_Report_Page.md)
 - [How to Use Update Report Filter?](Job_Update_Report_Filter.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Job_Filter_by_Date_Range.html) -->
  ~ Version 1.0<br>
 Created: 5 July 2024<br>
 Updated: 5 July 2024<br>
@@ -9265,6 +10036,7 @@ Updated: 5 July 2024<br>
 - [Project Schedule Page](Project_Schedule_Page.md)
 - [Wizard Page](Wizard_Page.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Job_Schedule_Page.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -9322,6 +10094,8 @@ Updated: 24 May 2024<br>
 - [How to Set Customized Favourite Filter as Default - Desktop ](Default_Favourite_Filter.md)
 - [How to Set Customized Favourite Filter as Default - App ](Default_Favourite_Filter_App.md)
 - [How to Set Up the Column View in the Report Page?](How_to_Set_Up_the_Column_View_in_the_Report_Page.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Job_Update_Report_Filter.html) -->
  ~ Version 1.0<br>
 Created: 23 May 2024<br>
 Updated: 23 May 2024<br>
@@ -9435,6 +10209,8 @@ Updated: 23 May 2024<br>
 - [How to Assist My New User to Login?](New_User_Login.md)
 - [I Can't Login to My Other Phone. Why?](IMEI.md)
 - [My Staff Did Not Receive Their OTP. What Should I Do?](Not_Receiving_OTP.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Login.html) -->
  ~ ## Main Menu
 
 **1. User Management**<br>
@@ -9683,7 +10459,421 @@ Updated: 23 May 2024<br>
    - <a href="Office_Check_In_Settings.html">Office Check-In Settings</a><br>
    </details>
    <br><br>
+
+**17. Features**<br>
+
+   Detailed guides on specific features and functionalities of the system.<br>
    
+   <details>
+   <summary>View Features Articles</summary>
+   <br>
+   - <a href="Data_Level_Structure.html">Data Level Structure</a><br>
+   - <a href="User_Types_Default_Access.html">User Type Default Access</a><br>
+   <br>
+   <h2>General</h2>
+   - <a href="Add_New_Project.html">How to Add New Project?</a><br>
+   - <a href="Create_Digital_Form.html">How to Create Digital Form?</a><br>
+   - <a href="Creation_of_Public_Form.html">How to Generate and Share QR Code for Public Form?</a><br>
+   <br>
+   <h2>Business Management</h2>
+   <b>Schedule</b><br>
+   - <a href="Add_New_Job.html">How to Add New Job?</a><br>
+   - <a href="Job_Schedule_Page.html">Job Schedule Page</a><br>
+   - <a href="Project_Schedule_Page.html">Project Schedule Page</a><br>
+   <br>
+   <b>Dashboard</b><br>
+   - <a href="Asset_Dashboard.html">Asset Dashboard</a><br>
+   - <a href="Job_Dashboard.html">Job Dashboard</a><br>
+   <br>
+   <b>Customer List</b><br>
+   - <a href="Add_New_Customer.html">How to Add New Customer?</a><br>
+   - <a href="Customer_List.html">Customer List</a><br>
+   <br>
+   <b>Asset List</b><br>
+   - <a href="How_to_Add_New_Asset.html">How to Add New Asset?</a><br>
+   <br>
+   <b>Product/Services List</b><br>
+   - <a href="Product_Services_List.html">Product/Services List</a><br>
+   <br>
+   <h2>Business Reports</h2>
+   - <a href="Report_Page.html">Report Page</a><br>
+   - <a href="Update_Report_Page.html">Update Report Page</a><br>
+   - <a href="Access_Submitted_Public_Form.html">How to Access Submitted Public Form?</a><br>
+   <br>
+   <h2>HR Suite</h2>
+   - <a href="Claim_Management.html">Claim Management</a><br>
+   - <a href="Add_Overtime_Claim.html">How to Add Overtime Claim?</a><br>
+   - <a href="Overtime_Management.html">Overtime Management</a><br>
+   - <a href="Attendance_List.html">Attendance List</a><br>
+   - <a href="Office_Check_In_Settings.html">Office Check-In Settings</a><br>
+   - <a href="Add_Claim.html">How to Add Claim?</a><br>
+   <br>
+   <h2>Company Settings</h2>
+   <br>
+   <b>Job Settings</b><br>
+   - <a href="To_Do_List.html">To-do List Setup</a><br>
+   <br>
+   <h2>Template Settings</h2>
+   <br>
+   <b>Job</b><br>
+   - <a href="Setup_Job_Template.html">How to Setup Job Template Page?</a><br>
+   <br>
+   <b>Digital Form</b><br>
+   - <a href="Digital_Form_Template_Settings.html">Digital Form Template Settings</a><br>
+   - <a href="Create_PDF.html">How to Set Up Digital Form PDF Template?</a><br>
+   <br>
+   <b>Public Form</b><br>
+   - <a href="Setup_Public_Form_Template_Page.html">How to Setup Public Form Template Page?</a><br>
+   <br>
+   <h2>User Management</h2>
+   - <a href="UAC_Policy_Management.html">UAC Policy Management</a><br>
+   - <a href="Company_Profile_Settings.html">Company Profile Settings</a><br>
+   - <a href="Notification_Settings_by_User_Account.html">Notification Settings by User Account</a><br>
+   <br>
+   <h2>Wizard</h2>
+   - <a href="Wizard_Page.html">Wizard Page</a><br>
+   </details>
+   <br><br>
+   
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Main_Menu.html) -->
+ ~ 
+## Metric Dashboard
+
+The Metrics Dashboard is used for monitoring key performance indicators and providing an overview of job statuses and service performance to assist in effective job management and decision-making.
+
+**Navigate to the section by clicking it.**<br>
+
+- [Filter by Date Range](#section1)<br>
+- [Filter by User List](#section2)<br>
+- [View Mode](#section3)<br>
+- [Edit Mode](#section4)
+- [Select Group](#section5)<br>
+<br><br><br>
+
+1. At the desktop's navigation bar, go to Business Metrics > Metric Dashboard.<br>
+   **Open Metric Dashboard Here:** [https://salesconnection.my/dashboard/metric/overview](https://salesconnection.my/dashboard/metric/overview)
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Step_1.png" alt="Metric Dashboard Step 1">
+   </p>
+   <br>
+
+<a id="section1"></a>
+
+### Filter by Date Range
+
+1. Click on the "Date Range".
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Filter_by_Date_Range_Step_1.png" alt="Metric Dashboard Filter by Date Range Step 1">
+   </p>
+
+2. Select the date range that you want.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Filter_by_Date_Range_Step_2.png" alt="Metric Dashboard Filter by Date Range Step 2">
+   </p>
+
+3. The date range has been applied successfully.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Filter_by_Date_Range_Step_3.png" alt="Metric Dashboard Filter by Date Range Step 3">
+   </p>
+   <br><br>
+
+<a id="section2"></a>
+
+### Filter by User List
+
+1. Click on the "User List".
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Filter_by_User_List_Step_1.png" alt="Metric Dashboard Filter by User List Step 1">
+   </p>
+
+2. Select the user you want to view.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Filter_by_User_List_Step_2.png" alt="Metric Dashboard Filter by User List Step 2">
+   </p>
+
+3. Click "Save".
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Filter_by_User_List_Step_3.png" alt="Metric Dashboard Filter by User List Step 3">
+   </p>
+
+4. The dashboard filter applied by the selected user has been applied successfully.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Filter_by_User_List_Step_4.png" alt="Metric Dashboard Filter by User List Step 4">
+   </p>
+   <br><br>
+
+<a id="section3"></a>
+
+### View Mode
+
+1. View Mode will be the default mode when you enter this page.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_View_Mode_Step_1.png" alt="Metric Dashboard View Mode Step 1">
+   </p>
+
+2. Click on the three dots icon.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_View_Mode_Step_2.png" alt="Metric Dashboard View Mode Step 2">
+   </p>
+
+3. You can either choose one of them.
+
+   | Terms | Description |
+   |-------|-------------|
+   | View More | View the full details of the selected chart. |
+   | Download Chart | Download the selected chart in your device. |
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_View_Mode_Step_3.png" alt="Metric Dashboard View Mode Step 3">
+   </p>
+   <br><br>
+
+<a id="section4"></a>
+
+### Edit Mode
+
+*Note: Edit Mode in this page is only use for expand the graph and change position.<br>
+
+**Resize Chart**
+
+1. Click "Edit Mode".
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Edit_Mode_Step_1.png" alt="Metric Dashboard Edit Mode - Resize Chart Step 1">
+   </p>
+
+2. Click on the three dots icon to adjust the graph size.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Edit_Mode_Step_2.png" alt="Metric Dashboard Edit Mode - Resize Chart Step 2">
+   </p>
+
+3. The adjustment has been made and will be automatically saved.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Edit_Mode_Step_3.png" alt="Metric Dashboard Edit Mode - Resize Chart Step 3">
+   </p>
+   <br>
+   
+**Reposition Chart**
+
+1. Long click the chart you want to reposition.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Reposition_Chart_Step_1.png" alt="Metric Dashboard Edit Mode - Reposition Chart Step 1">
+   </p>
+
+2. Drag the chart to the desired location.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Reposition_Chart_Step_2.png" alt="Metric Dashboard Edit Mode - Reposition Chart Step 2">
+   </p>
+
+3. The adjustment has been made and will be automatically saved.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Reposition_Chart_Step_3.png" alt="Metric Dashboard Edit Mode - Reposition Chart Step 3">
+   </p>
+   <br><br>
+
+<a id="section5"></a>
+
+### Select Group
+
+1. Click on "Dashboard" at the top left corner of the page.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Select_Group_Step_1.png" alt="Metric Dashboard Select Group Step 1">
+   </p>
+
+2. Tick the box to select a group for your dashboard.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Select_Group_Step_2.png" alt="Metric Dashboard Select Group Step 2">
+   </p>
+
+3. Click "Save".
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Select_Group_Step_3.png" alt="Metric Dashboard Select Group Step 3">
+   </p>
+
+4. The dashboard has been applied successfully.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Select_Group_Step_4.png" alt="Metric Dashboard Select Group Step 4">
+   </p>
+   <br><br><br>
+
+
+**Related Articles**<br>
+- [Metric Dashboard Layout Settings](Metric_Dashboard_Layout_Settings.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Metric_Dashboard.html) -->
+ ~ 
+## Metric Dashboard Layout Settings
+
+Metric Dashboard Layout Setting allows you to create charts and adjust the elements to customize the dashboard’s metric display.
+
+**Navigate to the section by clicking it.**<br>
+
+- [Create Dashboard Group](#section1)<br>
+- [Create Chart](#section2)<br>
+- [Edit Created Chart](#section3)<br>
+- [Delete_Chart](#section4)
+<br><br><br>
+
+1. At the desktop's navigation bar, go to Company  > Metric Dashboard.<br>
+   **Open Metric Dashboard Here:** [https://salesconnection.my/dashboard/metric/overview/template](https://salesconnection.my/dashboard/metric/overview/template)
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Step_1.png" alt="Metric Dashboard Layout Settings Step 1">
+   </p>
+   <br>
+
+<a id="section1"></a>
+
+### Create Dashboard Group
+
+1. For example, if you want to create a dashboard for admin group. Click "Create Group".
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Group_Step_1.png" alt="Metric Dashboard Layout Settings - Create Group Step 1">
+   </p>
+
+2. Enter the details of the dashboard group.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Group_Step_2.png" alt="Metric Dashboard Layout Settings - Create Group Step 2">
+   </p>
+
+3. Click "Create Group".
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Group_Step_3.png" alt="Metric Dashboard Layout Settings - Create Group Step 3">
+   </p>
+
+4. The admin group's dashboard has been created successfully.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Group_Step_4.png" alt="Metric Dashboard Layout Settings - Create Group Step 4">
+   </p>
+
+5. If you want to change the UI settings of another dashboard group, click here to select the dashboard group.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Group_Step_5.png" alt="Metric Dashboard Layout Settings - Create Group Step 5">
+   </p>
+   <br>
+
+<a id="section2"></a>
+
+### Create Chart
+
+1. If you want to create a chart for a dashboard, click "Create Chart".
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Chart_Step_1.png" alt="Metric Dashboard Layout Settings - Create Chart Step 1">
+   </p>
+
+2. Select the domain.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Chart_Step_2.png" alt="Metric Dashboard Layout Settings - Create Chart Step 2">
+   </p>
+
+3. Select the chart type.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Chart_Step_3.png" alt="Metric Dashboard Layout Settings - Create Chart Step 3">
+   </p>
+
+4. To configure the basic settings of the group, enter the required details of the desired chart.
+
+   **Difference between Date Range Condition**
+   
+   | Terms | Description |
+   |-------|-------------|
+   | Within | Includes dates within the specified range (e.g., within this year). |
+   | Till | Includes dates up to and including the specified end date. |
+   | Upto | Includes dates up to but not including the specified end date. |
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Chart_Step_4.png" alt="Metric Dashboard Layout Settings - Create Chart Step 4">
+   </p>
+
+5. Click "Save Chart".
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Chart_Step_5.png" alt="Metric Dashboard Layout Settings - Create Chart Step 5">
+   </p>
+
+6. The chart has been created successfully.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Create_Chart_Step_6.png" alt="Metric Dashboard Layout Settings - Create Chart Step 6">
+   </p>
+   <br>
+
+<a id="section3"></a>
+
+### Edit Created Chart
+
+1. If you want to edit the details of a chart, click on the settings icon.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Edit_Created_Chart_Step_1.png" alt="Metric Dashboard Layout Settings - Edit Created Chart Step 1">
+   </p>
+
+2. To configure the basic settings of the group, enter the required details of the desired chart.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Edit_Created_Chart_Step_2.png" alt="Metric Dashboard Layout Settings - Edit Created Chart Step 2">
+   </p>
+
+3. Click "Save Chart".
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Edit_Created_Chart_Step_3.png" alt="Metric Dashboard Layout Settings - Edit Created Chart Step 3">
+   </p>
+
+4. The chart details have been changed successfully.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Edit_Created_Chart_Step_4.png" alt="Metric Dashboard Layout Settings - Edit Created Chart Step 4">
+   </p>
+   <br>
+
+<a id="section4"></a>
+
+### Delete Chart
+
+1. If you want to delete a chart, click on the "X" icon.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Delete_Chart_Step_1.png" alt="Metric Dashboard Layout Settings - Delete Chart Step 1">
+   </p>
+
+2. The chart has been deleted successfully.
+
+   <p align="center">
+     <img src="img2/Metric_Dashboard_Layout_Settings_Delete_Chart_Step_2.png" alt="Metric Dashboard Layout Settings - Delete Chart Step 2">
+   </p>
+   <br><br><br>
+
+**Related Articles**<br>
+- [Metric Dashboard](Metric_Dashboard.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Metric_Dashboard.html) -->
  ~ ## How to do Mobile Login using OTP?
     
 1. At the desktop site's navigation bar, go to User Management > User List.
@@ -9718,6 +10908,8 @@ Updated: 23 May 2024<br>
 - [How to Add New User Category?](Add_New_User_Category.md)
 - [How to Assist My New User to Login?](New_User_Login.md)
 - [How to Login Into Sales Connection Using Mobile and Desktop?](Login.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Mobile_Login_Using_OTP.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -9787,6 +10979,119 @@ Updated: 24 May 2024<br>
 - [How to Login Into Sales Connection Using Mobile and Desktop?](Login.md)
 - [I Can't Login to My Other Phone. Why?](IMEI.md)
 - [My Staff Did Not Receive Their OTP. What Should I Do?](Not_Receiving_OTP.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/New_User_Login.html) -->
+ ~ Version 1.0<br>
+Created: 22 July 2024<br>
+Updated: 22 July 2024<br>
+## I am not getting any notification from the system on my device. Why?
+
+**Navigate to the section by clicking it.**<br>
+
+- [Mobile Version](#section1)<br>
+- [Desktop Version](#section2)
+<br><br><br>
+ 
+ <a id="section1"></a>
+
+- **Mobile Version**:
+
+1. In Settings page of your phone, Select "Apps".
+
+    <p align="center">
+      <img src="img/Did_Not_Get_Any_Notification_From_System_Step_1.png" alt="Notification Setting Step 1" width="280" height="550">
+    </p>
+
+    *Note: Phone settings may vary depending on the phone model.<br>
+    
+2. Click "Apps".
+
+   <p align="center">
+     <img src="img/Did_Not_Get_Any_Notification_From_System_Step_2.png" alt="Notification Setting Step 2" width="280" height="550">
+   </p><br>
+
+3. Click "Sales Connection".
+
+   <p align="center">
+     <img src="img/Did_Not_Get_Any_Notification_From_System_Step_3.png" alt="Notification Setting Step 3" width="280" height="550">
+   </p><br>
+
+4. Click "Notifications".
+
+   <p align="center">
+     <img src="img/Did_Not_Get_Any_Notification_From_System_Step_4.png" alt="Notification Setting Step 4" width="280" height="550">
+   </p><br>
+
+5. Make sure the "Allow Notification" has been toggled.
+
+   <p align="center">
+     <img src="img/Did_Not_Get_Any_Notification_From_System_Step_5.png" alt="Notification Setting Step 5" width="280" height="550">
+   </p><br>
+     
+   <a id="section2"></a><br><br>
+
+ - **Desktop Version**:
+
+1. For example, if you are using Google Chrome browser, click on the three dots icon.
+
+   <p align="center">
+     <img src="img2/Desktop_Notification_Setting_Step_1.png" alt="Desktop Notification Setting Step 1">
+   </p><br>
+
+2. Click on "Settings".
+
+   <p align="center">
+     <img src="img2/Desktop_Notification_Setting_Step_2.png" alt="Desktop Notification Setting Step 2">
+   </p><br>
+
+3. Click on "Privacy and security".
+
+   <p align="center">
+     <img src="img2/Desktop_Notification_Setting_Step_3.png" alt="Desktop Notification Setting Step 3">
+   </p><br>
+
+4. Click on "Site settings".
+
+   <p align="center">
+     <img src="img2/Desktop_Notification_Setting_Step_4.png" alt="Desktop Notification Setting Step 4">
+   </p><br>
+
+5. Click on "Notifications".
+
+   <p align="center">
+     <img src="img2/Desktop_Notification_Setting_Step_5.png" alt="Desktop Notification Setting Step 5">
+   </p><br>
+
+6. Click on the "Add" button.
+
+   <p align="center">
+     <img src="img2/Desktop_Notification_Setting_Step_6.png" alt="Desktop Notification Setting Step 6">
+   </p><br>
+
+7. Paste the Sales Connection link (https://salesconnection.my/activity/scheduler) in here.
+
+   <p align="center">
+     <img src="img2/Desktop_Notification_Setting_Step_7.png" alt="Desktop Notification Setting Step 7">
+   </p><br>
+
+8. Click on the "Add" button.
+
+   <p align="center">
+     <img src="img2/Desktop_Notification_Setting_Step_8.png" alt="Desktop Notification Setting Step 8">
+   </p><br>
+
+9. Once it is on “Allow”, you will begin receiving notifications from Sales Connection on the PC you are using similar to your mobile device that’s logged into Sales Connection.
+
+   <p align="center">
+     <img src="img2/Desktop_Notification_Setting_Step_9.png" alt="Desktop Notification Setting Step 9">
+   </p><br>
+   <br><br><br>
+
+**Related Article**
+- [I Get Spammed By a Lot of Notifications. How Do I Disable It?](Disable_Notification.md)
+- [Notification Settings by User Account](Notification_Settings_by_User_Account.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Not_Getting_Notification.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -9846,9 +11151,90 @@ Updated: 24 May 2024<br>
 - [I Can't Login to My Other Phone. Why?](IMEI.md)
 - [How to Change Account Password?](Change_Account_Password.md)
 - [I forgot my password. How can I recover or reset it?](Forgot_Password.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Not_Receiving_OTP.html) -->
+ ~ Version 1.0<br>
+Created: 18 July 2024<br>
+Updated: 18 July 2024<br>
+## Notification Settings by User Account
+
+Customise you and your team’s notification settings on the system to minimize unnecessary alert updates and optimise your team’s operations with the system.<br><br>
+
+*Note: Only certain admins can edit the notification settings. Please contact your admin if you wish to enable the notifications.<br>
+ 
+1. To enable notifications for users, go to desktop site navigation bar > User Management > User Account Customisation.<br>
+   **Open UAC Page Here:** [https://salesconnection.my/uac](https://salesconnection.my/uac)<br>
+     
+   <p align="center">
+     <img src="img/User_Account_Customisation.png" alt="User Account Customisation">
+   </p>
+     
+2. Click on the department name.<br>
+  
+   <p align="center">
+     <img src="img/Select_Department_In_UAC.png" alt="Select Department in UAC">
+   </p>
+     
+3. Enter the name of the user who needs to enable notification.<br>
+
+   <p align="center">
+     <img src="img/Enter_Name_For_Enable_Assisted_Checkout.png" alt="Enter Name for Enable Assisted Checkout">
+   </p>
+  
+4. Click on the "Select Department" button.<br>
+
+   <p align="center">
+     <img src="img/Click_Select_Department_Button.png" alt="Click Select Department Button">
+   </p>
+
+5. Click the "pencil" icon beside the user who needs to enable the notifications.<br>
+
+   <p align="center">
+     <img src="img/Click_Pencil_Icon.png" alt="Click Pencil Icon">
+   </p>
+
+6. Click on the "Notification Settings".<br>
+
+   <p align="center">
+     <img src="img/Enable_Notification_In_UAC_Step_6.png" alt="Enable Notification in UAC Step 6">
+   </p>
+
+7. Tick the boxes next to the notifications you want to receive. For example, select all the job notifications.
+
+   | Terms | Meaning |
+   |-------|---------|
+   | Noti | Push notifications that will appear on your device (such as your phone lock screen). |
+   | Email | Notifications sent to your email address. |
+   | Mention | Alerts when someone mentions you in a comment. |
+   | Assign | Notifications when a task or job is assigned to you. |
+   | View | Notifications for activities that require your view. |
+
+   <p align="center">
+     <img src="img/Enable_Notification_In_UAC_Step_7.png" alt="Enable Notification in UAC Step 7">
+   </p>
+
+8. Click "Save Notification Settings".
+
+   <p align="center">
+     <img src="img/Enable_Notification_In_UAC_Step_8.png" alt="Enable Notification in UAC Step 8">
+   </p>
+   
+9. Notification settings are successfully updated once you see the “Settings Successfully Updated!” prompt appear.
+
+   <p align="center">
+     <img src="img/Enable_Notification_In_UAC_Step_9.png" alt="Enable Notification in UAC Step 9">
+   </p>
+   <br><br><br>
+
+**Related Articles**
+- [I Get Spammed By a Lot of Notifications. How Do I Disable It?](Disable_Notification.md)
+- [UAC Policy Management](UAC_Policy_Management.md)
+- [Company Profile Settings](Company_Profile_Settings.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Notification_Settings_by_User_Account.html) -->
  ~ Version 1.0<br>
 Created: 9 July 2024<br>
-Updated: 9 July 2024<br>
+Updated: 22 July 2024<br>
 ## Office Check-In Settings
 
 Save your office address(es) into the system and set them up for your team to clock in and out of the office with our Office Check-In feature. This gives the team an alternative to check in/out to locations deemed as your office address without requiring a Job on it.<br><br>
@@ -9857,7 +11243,8 @@ Save your office address(es) into the system and set them up for your team to cl
 
 - [Add Office Check-In Location](#section1)<br>
 - [Clear Assigned User](#section2)<br>
-- [Delete Office Check-In](#section3)
+- [Delete Office Check-In Location](#section3)<br>
+- [Edit Office Check-In Location](#section4)
 <br><br><br>
 
 <a id="section1"></a>
@@ -9957,7 +11344,7 @@ To remove/clear off all the assigned users from being able to use the registered
 
 <a id="section3"></a>
 
-### Delete Office Check-In
+### Delete Office Check-In Location
 To delete the registered location set for your office check in/out, follow the steps below.<br>
 
 1. Click on the "Delete" icon beside the office check-in you want to delete.
@@ -9977,6 +11364,73 @@ To delete the registered location set for your office check in/out, follow the s
    <p align="center">
       <img src="img2/Office_Check_In_Settings3_Step_3.png" alt="Office Check In Settings3 Step 3">
    </p>  
+   <br><br>
+
+<a id="section4"></a>
+
+### Edit Office Check-In Location
+To edit the registered location set for your office check in/out, follow the steps below.<br>
+
+1. At the desktop's navigation bar, go to Business Management > Customer List.<br>
+   **Open Customer List Page Here:** [https://salesconnection.my/customers](https://salesconnection.my/customers)<br>
+
+   <p align="center">
+      <img src="img2/Office_Check_In_Settings4_Step_1.png" alt="Office Check In Settings4 Step 1">
+   </p>
+  
+2. Use filter to search the customer.
+
+   <p align="center">
+      <img src="img2/Office_Check_In_Settings4_Step_2.png" alt="Office Check In Settings4 Step 2">
+   </p>
+  
+3. Click the "expand" button to open the customer details page.
+
+   <p align="center">
+      <img src="img2/Office_Check_In_Settings4_Step_3.png" alt="Office Check In Settings4 Step 3">
+   </p>  
+
+4. Scroll down to the "ADDRESS" column.
+
+   <p align="center">
+      <img src="img2/Office_Check_In_Settings4_Step_4.png" alt="Office Check In Settings4 Step 4">
+   </p>
+  
+5. Click on the "pencil" icon of the address.
+
+   <p align="center">
+      <img src="img2/Office_Check_In_Settings4_Step_5.png" alt="Office Check In Settings4 Step 5">
+   </p> 
+
+6. Click "Proceed" to edit the address.
+
+   <p align="center">
+      <img src="img2/Office_Check_In_Settings4_Step_6.png" alt="Office Check In Settings4 Step 6">
+   </p>  
+
+7. Search the office check-in location.
+
+   <p align="center">
+      <img src="img2/Office_Check_In_Settings4_Step_7.png" alt="Office Check In Settings4 Step 7">
+   </p
+  
+8. Confirm the location and click "Submit".
+
+   <p align="center">
+      <img src="img2/Office_Check_In_Settings4_Step_8.png" alt="Office Check In Settings4 Step 8">
+   </p>
+
+9. Enter the location's name.
+
+   <p align="center">
+      <img src="img2/Office_Check_In_Settings4_Step_9.png" alt="Office Check In Settings4 Step 9">
+   </p
+  
+10. Click on the "SAVE" button and the new location will be applied in the office check-in settings automatically.
+
+    <p align="center">
+       <img src="img2/Office_Check_In_Settings4_Step_10.png" alt="Office Check In Settings4 Step 10">
+    </p>
    <br><br><br>
 
 **Related Articles**
@@ -9984,6 +11438,8 @@ To delete the registered location set for your office check in/out, follow the s
 - [How to Enable Assist Check Out?](Enable_Assist_Check_Out.md)
 - [I am at the location, but the system says I am too far from the location.](Check_In_Address.md)
 - [How to Adjust Geofencing Radius?](Adjust_Geofencing_Radius.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Office_Check_In_Settings.html) -->
  ~ Version 1.0<br>
 Created: 15 July 2024<br>
 Updated: 15 July 2024<br>
@@ -10253,8 +11709,135 @@ Updated: 15 July 2024<br>
    <br><br><br>
 
 **Related Articles**
+- [How to Add Overtime Claim?](Add_Overtime_Claim.md)
 - [Claim Management](Claim_Management.md)
 - [Office Check-In Settings](Office_Check_In_Settings.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Overtime_Management.html) -->
+ ~ ## Performance Metrics (APP)
+
+**Performance Metrics** page provides quick access to key job and project statistics, including overdue jobs, total jobs, completed jobs, top 5 customers by month, and total projects won. Each metric has a "View" button for detailed reports.<br><br>
+
+1. At the mobile app's navigation bar, click "Metric".<br>
+
+   <p align="center">
+     <img src="img2/Performance_Metrics_App_Step_1.png" alt="Performance Metrics App Step 1">
+   </p>
+
+2. Click the "three lines" icon to filter the performance metrics.
+
+   <p align="center">
+     <img src="img2/Performance_Metrics_App_Step_2.png" alt="Performance Metrics App Step 2">
+   </p>
+
+3. Click "Select" to filter the date.
+
+   <p align="center">
+     <img src="img2/Performance_Metrics_App_Step_3.png" alt="Performance Metrics App Step 3">
+   </p>
+
+4. Select the date range to filter.
+
+   <p align="center">
+     <img src="img2/Performance_Metrics_App_Step_4.png" alt="Performance Metrics App Step 4">
+   </p>
+   
+5. Click "Select User" to filter.<br>
+
+   <p align="center">
+     <img src="img2/Performance_Metrics_App_Step_5.png" alt="Performance Metrics App Step 5">
+   </p>
+
+6. Select the user by ticking the box beside the user's name.
+
+   <p align="center">
+     <img src="img2/Performance_Metrics_App_Step_6.png" alt="Performance Metrics App Step 6">
+   </p>
+
+7. Click "SAVE".
+
+   <p align="center">
+     <img src="img2/Performance_Metrics_App_Step_7.png" alt="Performance Metrics App Step 7">
+   </p>
+
+8. Click "Select Group".
+
+   <p align="center">
+     <img src="img2/Performance_Metrics_App_Step_8.png" alt="Performance Metrics App Step 8">
+   </p>
+
+9. Click on the group you want to view.
+
+   <p align="center">
+     <img src="img2/Performance_Metrics_App_Step_9.png" alt="Performance Metrics App Step 9">
+   </p>
+   
+10. Click "SAVE".
+
+    <p align="center">
+      <img src="img2/Performance_Metrics_App_Step_10.png" alt="Performance Metrics App Step 10">
+    </p>
+
+11. The performance metrics have been filtered successfully and shown as below.
+
+    <p align="center">
+      <img src="img2/Performance_Metrics_App_Step_11.png" alt="Performance Metrics App Step 11">
+    </p>
+
+12. Click on the "Chart" icon to view the chart of the specific category.
+
+    <p align="center">
+      <img src="img2/Performance_Metrics_App_Step_12.png" alt="Performance Metrics App Step 12">
+    </p>
+
+13. For example, the "Total Job" chart has been shown below.
+
+    <p align="center">
+      <img src="img2/Performance_Metrics_App_Step_13.png" alt="Performance Metrics App Step 13">
+    </p>
+       
+14. Click "View" to view more details of the category.
+
+    <p align="center">
+      <img src="img2/Performance_Metrics_App_Step_14.png" alt="Performance Metrics App Step 14">
+    </p>
+
+15. Click the ">" button to view other category's details. 
+
+    <p align="center">
+      <img src="img2/Performance_Metrics_App_Step_15.png" alt="Performance Metrics App Step 15">
+    </p>
+
+16. Click on "three lines" icon to filter the page.
+
+    <p align="center">
+      <img src="img2/Performance_Metrics_App_Step_16.png" alt="Performance Metrics App Step 16">
+    </p>
+
+17. Use the filter you want.
+
+    <p align="center">
+      <img src="img2/Performance_Metrics_App_Step_17.png" alt="Performance Metrics App Step 17">
+    </p>
+
+18. Click "SEARCH".
+
+    <p align="center">
+      <img src="img2/Performance_Metrics_App_Step_18.png" alt="Performance Metrics App Step 18">
+    </p>
+
+19. For example, the job status's filter has been changed to "Completed" and below is the filtered page.
+
+    <p align="center">
+      <img src="img2/Performance_Metrics_App_Step_19.png" alt="Performance Metrics App Step 19">
+    </p>
+   <br><br><br>
+   
+**Related Articles**
+- [Metric Dashboard](Metric_Dashboard.md)
+- [Metric Dashboard Layout Settings](Metric_Dashboard_Layout_Settings.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Performance_Metrics_App.html) -->
  ~ Version 1.0<br>
 Created: 4 July 2024<br>
 Updated: 4 July 2024<br>
@@ -10342,6 +11925,8 @@ Updated: 4 July 2024<br>
 
 **Related Articles**
 - [Customer List](Customer_List.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Product_Services_List.html) -->
  ~ Version 1.0<br>
 Created: 10 July 2024<br>
 Updated: 10 July 2024<br>
@@ -10469,6 +12054,7 @@ Updated: 10 July 2024<br>
 - [Job Schedule Page](Job_Schedule_Page.md)
 - [Wizard Page](Wizard_Page.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Project_Schedule_Page.html) -->
  ~ Welcome to the Sales Connection Support Site. Here you'll find documentation and resources to help you get the most out of our products and services.<br><br>
 
 ## FAQs
@@ -10494,24 +12080,10 @@ Updated: 10 July 2024<br>
 - [How to Copy Account for New User?](Copy_Account.md)
 
 
-### Import
-- [How to Import New Customer(s)?](Import_Customer.md)
-- [How to Import New Project(s)?](Import_Project.md)
-- [How to Import New Product/Services(s)?](Import_Product_Services.md)
-- [How do I Import New Asset(s)?](Import_Asset.md)
-- [How to Import New UOM(s)?](Import_UOM.md)
-- [How do I Import New User(s)?](Import_User.md)
-- [How to Import New Contact(s)?](Import_Contact.md)
-
-  
-### Bulk Update
-- [How to do Customer/Project/Product/Services/UOM Bulk Update?](Customer_Bulk_Update.md)
-- [How to do Asset Bulk Update?](Asset_Bulk_Update.md)
-
-
 ### Updates
 - [My updates are not received by my admin and other team members. Why?](Updates_Not_Received_by_Team_Members.md)
 - [How to Check Pending Update?](Check_Pending_Update.md)
+- [How to Check Pending Data?](Check_Pending_Data.md)
 
   
 ### Password
@@ -10538,7 +12110,6 @@ Updated: 10 July 2024<br>
 
 
 ### Status 
-- [How do I Add New Status in Customer/Project/Job?](Add_New_Status_in_Customer_Project_Job.md)
 - [How do I Add New Status in Digital Form?](Add_New_Status_in_Digital_Form.md)
 
   
@@ -10554,11 +12125,13 @@ Updated: 10 July 2024<br>
 
 ### Notification
 - [I Get Spammed By a Lot of Notifications. How Do I Disable It?](Disable_Notification.md)
+- [I am Not Getting Any Notification From the System On My Device. Why?](Not_Getting_Notification.md)
 
 
 ### Reminder 
 - [How to Edit Reminder Template?](Edit_Reminder_Template.md)
-  
+- [How to Create New Reminder Template and do Autopopulate Setting?](Create_Reminder_Template.md)
+
 
 ### Others
 - [How to comment with photo / attachment?](Comment_With_Photo.md)
@@ -10568,6 +12141,7 @@ Updated: 10 July 2024<br>
 - [I can't load the schedule page. Why?](Can't_Load_Schedule_Page.md)
 - [How does an Admin Reset App Access for a User?](Admin_Reset_App_Access.md)
 - [How to Add New Product/Services?](Add_New_Product&Service_List.md)
+- [Comment Category Segmentation](Comment_Category_Segmentation.md)
 
   
 ## Features Knowledge 
@@ -10591,6 +12165,7 @@ Updated: 10 July 2024<br>
 ### Dashboard
 - [Job Dashboard](Job_Dashboard.md)
 - [Asset Dashboard](Asset_Dashboard.md)
+
   
 ### Customer List
 - [How to Add New Customer?](Add_New_Customer.md)
@@ -10608,11 +12183,14 @@ Updated: 10 July 2024<br>
 ## Business Reports
 - [Report Page](Report_Page.md)
 - [Update Report Page](Update_Report_Page.md)
+- [How to Access Submitted Public Form?](Access_Submitted_Public_Form.md)
 
 
 ## HR Suite 
 - [Claim Management](Claim_Management.md)
+- [How to Add Claim?](Add_Claim.md)
 - [Overtime Management](Overtime_Management.md)
+- [How to Add Overtime Claim?](Add_Overtime_Claim.md)
 - [Office Check-In Settings](Office_Check_In_Settings.md)
 
 
@@ -10621,6 +12199,17 @@ Updated: 10 July 2024<br>
 - [To-do List Setup](To_Do_List.md)
 
 
+## Import
+- [How to Import New Customer(s)?](Import_Customer.md)
+- [How to Import New Project(s)?](Import_Project.md)
+- [How do I Import New Asset(s)?](Import_Asset.md)
+- [How to Import New Contact(s)?](Import_Contact.md)
+- [How to Import New Product/Services(s)?](Import_Product_Services.md)
+- [How to Import New UOM(s)?](Import_UOM.md)
+- [How to do Customer/Project/Product/Services/UOM Bulk Update?](Customer_Bulk_Update.md)
+- [How to do Asset Bulk Update?](Asset_Bulk_Update.md)
+
+  
 ## Template Settings
 ### Job
 - [How to Setup Job Template Page?](Setup_Job_Template.md)
@@ -10631,12 +12220,19 @@ Updated: 10 July 2024<br>
 - [Company Profile Settings](Company_Profile_Settings.md)
 
 
+### User Account Customisation
+- [Notification Settings by User Account](Notification_Settings_by_User_Account.md)
+
+
 ## Wizard
 - [Wizard Page](Wizard_Page.md)
 <br><br>
+
 Feel free to explore the sections above by clicking it for more information.<br><br>
 
 Thank you for choosing Sales Connection.
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/) -->
  ~ Version 1.0<br>
 Created: 5 July 2024<br>
 Updated: 5 July 2024<br>
@@ -10965,6 +12561,8 @@ The Report Page allows you to **generate** and **customize** reports across vari
 - [How to Set Up the Column View in the Report Page?](How_to_Set_Up_the_Column_View_in_the_Report_Page.md)
 - [How to Use Update Report Filter?](Job_Update_Report_Filter.md)
 - [How to Pull Out Job/Project/Form Report?](Export_Report.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Report_Page.html) -->
  ~ Version 1.0<br>
 Created: 28 June 2024<br>
 Updated: 28 June 2024<br>
@@ -11023,6 +12621,7 @@ Updated: 28 June 2024<br>
 - [How to Edit Remote Signature Email Template?](Edit_Remote_Signature_Email_Template.md)
 - [How to Request for Remote Signature From Customer?](How_to_Get_Remote_Signature_From_Customer.md)
   
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Request_Signature_Company_Stamp.html) -->
  ~ Version 1.0<br>
 Created: 25 June 2024<br>
 Updated: 25 June 2024<br>
@@ -11105,6 +12704,7 @@ Updated: 25 June 2024<br>
 **Related Articles**
 - [How to Add New Job?](Add_New_Job.md)
 
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Setup_Job_Template.html) -->
  ~ ## How to Setup Public Form Template?
 
 1. At the desktop site's navigation bar, go to Template Settings > Public Form Templates.<br>
@@ -11118,10 +12718,9 @@ Updated: 25 June 2024<br>
 
    | Terms | Description |
    |-------|:---------|
-   | Template Choices | Choose the template (e.g. Public Form) |
    | Template Category | Choose the public form category (e.g. Sales Enquiry, Service Enquiry) |
    | Template Short Code | Code starting with the specified alphabet for identification (e.g. PF) |
-   | Template Name | Name of the template (e.g. Public Form) |
+   | Template Name | Name of the template (e.g. Public Form / Ticket / etc.) |
 
    <p align="center">
       <img src="img/Public_Form_Template_Settings_Step_2.png" alt="Public Form Template Step 2">
@@ -11174,6 +12773,127 @@ Updated: 25 June 2024<br>
 **Related Articles**
 - [How to Generate and Share QR Code for Public Form?](Creation_of_Public_Form.md)
 - [How to Setup Public Form Template?](Access_Submitted_Public_Form.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Setup_Public_Form_Template_Page.html) -->
+ ~ ## Start Up Guide
+
+### Get Started with Sales Connection
+
+Whether you're joining an established or customised system, set up for success! Sales Connection is flexible and customizable, everyone uses it a little differently.<br>
+
+This article walks you through customizing your experience of Sales Connection.<br>
+
+*Note: Some of the following features have plan-based limits or are optional Sales Connection and contact your salesman to upgrade it.<br><br>
+
+
+## Create your own Workspace
+
+A Workspace can be used by one or more people.<br>
+
+Whether you're a freelancer, managing a household, or planning a multi-city vacation, a one-person Workspace is useful for your to-do lists, action items, and projects.<br>
+
+If you're solo, you'll be automatically set up with a personal Workspace layout.<br>
+
+If you're creating a new Workspace, get started by learning about our core ClickUp features.<br><br>
+
+
+## Join a Workspace
+
+Your organization will send you an invite to join their ClickUp Workspace. If you don't have a ClickUp account, you'll be prompted to sign up.<br>
+
+Your organization may require two-factor authentication or use single sign-on (SSO).<br>
+
+If you've joined your organization's Workspace, you can always create your own separate Workspace using the same account, or create a separate ClickUp account with a different email address.<br><br>
+
+
+## What's my user type?
+
+Sales Connection supports various user types, each with distinct levels of access and permissions to ensure proper control and security within the platform:<br>
+
+- **Admin:** Full access to all system features, settings, and user management.
+- **Subadmin:** High-level access, with some restrictions compared to Admin.
+- **Staff:** Access primarily focused on project management, task execution, and operational activities.
+- **Associate User:** Limited access, mostly for collaboration, viewing tasks, and completing assigned work.<br>
+  
+For more details, visit the [User Types Default Access page](https://salesconnection.github.io/Sales-Connection-Support/User_Types_Default_Access.html).<br><br>
+
+
+## How is Sales Connection organized?
+
+Sales Connection organizes its data into seven hierarchical levels which is called Data Level Structure, ensuring structured and efficient data management:<br>
+
+- **Customer:** This is the topmost level containing client information, including contact details, addresses, and related interactions.
+- **Project:** Projects are organized under customers, representing major initiatives or contracts associated with a customer.
+- **Job:** These are specific tasks or activities within a project that need to be completed to fulfill the project's objectives.
+- **Digital Form:** Electronic documents used within the system for data collection, processing, and workflow management.
+- **Product & Services:** Items and services offered by the company, including details about each product or service.
+- **Public Form:** Forms accessible to external users, often used for data collection or public-facing interactions.
+- **Asset:** Company resources and equipment, tracked and managed within the system for operational efficiency.<br>
+
+For more detailed information, visit the [Data Level Structure page](https://salesconnection.github.io/Sales-Connection-Support/Data_Level_Structure.html).<br><br>
+
+
+## Personal productivity features
+
+Save time by keeping everything in ClickUp.
+
+- **Reminders:** Remember everything!
+- **Notepad:** Jot down quick notes.
+- **Inbox:** Stay on top of your notifications by checking them regularly and clearing them out.
+- **Calendar view:** Never miss a meeting again! Add a Calendar view and sync your Google Calendar to it.
+
+
+## Prioritize important work
+
+Stay on top of the most important work you need to do.
+
+- **Tray:** Minimize tasks and Docs so you can keep them in focus.
+- **Home:** View your most important tasks, events, and Reminders so you always know where your focus should be.
+- **Favorites:** Bookmark the Workspace locations you use the most.
+- **Private views:** Create any type of view that's just for you. You can group, sort, and filter tasks to display what you need to work on.
+
+
+## Communicate with your team
+
+Keep in touch with the people in your Workspace.
+
+- **Comments:** Communicate with your team without leaving a task or Doc! Use comments to ask questions, get feedback, and format content with rich text, embeds, and attachments.
+- **@mention:** Tag your teammates in tasks, Docs, and Chat views anywhere in your Workspace. You can also mention tasks, Docs, and locations!
+- **Chat view:** Add a Chat view to a location to talk about work outside of specific tasks and Docs. Or get social and chat about your weekend plans!
+- **Clip:** Sometimes a short video is all you need to understand a process. Record videos of your ClickUp Workspace right from your browser.
+- **Voice Clips:** Record and send a quick message instead of typing out a long comment.
+- **Email in ClickUp:** Send emails from tasks in ClickUp to communicate with other teams in your organization who haven't started using ClickUp yet. You can also send emails to people outside your organization, including your customers and vendors.
+
+
+## Collaborate with your team
+
+Everything in ClickUp happens in real-time. Work on tasks together or asynchronously using these features. 
+
+- **Docs:** Collaborate with your team to create amazing content. Or use comments to get asynchronous feedback on a policy or project charter.
+- **Whiteboards:** Use Whiteboards to collaborate and ideate. Add internal and external content, including tasks.
+- **Proofing:** Do you work with videos, images, or PDFs? Centralize feedback and expedite approval processes by assigning comments directly on task attachments!
+- **Integrations:** Learn how to use other apps in ClickUp.
+
+
+## Get even more productive
+
+There's a lot to learn in Sales Connection. Here are several easy-to-use features that help you work more efficiently.
+
+- **Quick Action menu:** Create tasks, Reminders, Docs, and more from anywhere in your Workspace.
+- **Command Center:** Type Cmd + K(Mac) or Ctrl + K(Windows) from anywhere within ClickUp to find anything in your Workspace.
+- **/Slash Commands:** Quickly add rich text, attach images, move tasks, change due dates, and more.
+- **Hotkeys and keyboard shortcuts:** From your Workspace, press Shift + ?.
+
+
+## Try our Sales Connection system
+
+Along with working in a web browser, you can use Sales Connection on your computer or mobile device.<br>
+
+[Sales Connection Desktop Website](https://salesconnection.my/): Try the ClickUp desktop app.<br>
+[Sales Connection Mobile App](https://salesconnection.github.io/Sales-Connection-Support/Login.html#section2): Take your work with you on the go with the ClickUp mobile app for Apple and Android.<br><br>
+
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Start_Up_Guide.html) -->
  ~ Version 1.0<br>
 Created: 26 June 2024<br>
 Updated: 26 June 2024<br>
@@ -11377,6 +13097,8 @@ Updated: 26 June 2024<br>
 - [Data Level Structure](Data_Level_Structure.md)
 - [How to Add New Job?](Add_New_Job.md)
 - [How to Add New Project?](Add_New_Project.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/To_Do_List.md) -->
  ~ Version 1.0<br>
 Created: 18 June 2024<br>
 Updated: 18 June 2024<br>
@@ -11507,6 +13229,8 @@ Updated: 18 June 2024<br>
 - [How to Login Into Sales Connection Using Mobile and Desktop?](Login.md)
 - [How to Assist My New User to Login?](New_User_Login.md)
 - [My Staff Did Not Receive Their OTP. What Should I Do?](Not_Receiving_OTP.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Turn_Off_IMEI.html) -->
  ~ Version 1.0<br>
 Created: 3 July 2024<br>
 Updated: 3 July 2024<br>
@@ -11686,30 +13410,7 @@ Updated: 3 July 2024<br>
 **Related Articles**
 - [How to Copy Account for New User?](Copy_Account.md)
 
- ~ Version 1.0<br>
-Created: 24 May 2024<br>
-Updated: 24 May 2024<br>
-## My updates are not received by my admin and other team members. Why?
-
-### Here are the potential issues and solutions:
-
-1. Poor Internet Connnection:<br>
-
-   - Check if your internet connection is stable.<br>
-  &emsp;If it's unstable, try switching to a more reliable network, such as a mobile hotspot or a different Wi-Fi network.<br>
-
-   - Test your internet speed.<br>
-  &emsp;If the speed is below 25 Mbps, you may experience difficulties in updating. If possible, switch to a faster internet connection.<br><br>
-
-2. Page Not Refreshed:<br>
-
-   - Ensure all team members, including your admin, refresh their page to receive the latest updates.
-
-<br><br><br>
-
-**Related Articles**<br>
-- [I can't load the schedule page. Why?](Can't_Load_Schedule_Page.md)
-- [How to comment with photo / attachment?](Comment_With_Photo.md)
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/UAC_Policy_Management.html) -->
  ~ Version 1.0<br>
 Created: 16 July 2024<br>
 Updated: 16 July 2024<br>
@@ -12038,6 +13739,34 @@ The Update Report Page allows you to **generate** and **customize** reports acro
 - [How to Set Up the Column View in the Report Page?](How_to_Set_Up_the_Column_View_in_the_Report_Page.md)
 - [How to Use Update Report Filter?](Job_Update_Report_Filter.md)
 - [How to Pull Out Job/Project/Form Report?](Export_Report.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Update_Report_Page.html) -->
+ ~ Version 1.0<br>
+Created: 24 May 2024<br>
+Updated: 24 May 2024<br>
+## My updates are not received by my admin and other team members. Why?
+
+### Here are the potential issues and solutions:
+
+1. Poor Internet Connnection:<br>
+
+   - Check if your internet connection is stable.<br>
+  &emsp;If it's unstable, try switching to a more reliable network, such as a mobile hotspot or a different Wi-Fi network.<br>
+
+   - Test your internet speed.<br>
+  &emsp;If the speed is below 25 Mbps, you may experience difficulties in updating. If possible, switch to a faster internet connection.<br><br>
+
+2. Page Not Refreshed:<br>
+
+   - Ensure all team members, including your admin, refresh their page to receive the latest updates.
+
+<br><br><br>
+
+**Related Articles**<br>
+- [I can't load the schedule page. Why?](Can't_Load_Schedule_Page.md)
+- [How to comment with photo / attachment?](Comment_With_Photo.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Updates_Not_Received_by_Team_Members.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 10 June 2024<br>
@@ -12098,6 +13827,8 @@ each team, etc. Note that a user can be in more than one Staff Category and a us
 **Related Articles**<br>
 - [How to add new user category?](Add_New_User_Category.md)<br>
 - [Data Level Structure](Data_Level_Structure.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/User_Types_Default_Access.html) -->
  ~ Version 1.0<br>
 Created: 24 May 2024<br>
 Updated: 24 May 2024<br>
@@ -12172,6 +13903,8 @@ Updated: 24 May 2024<br>
 - [I Forgot to Check Out, How?](Assist_Check_Out.md)
 - [How to Enable Assist Check Out?](Enable_Assist_Check_Out.md)
 - [I am at the location, but the system says I am too far from the location.](Check_In_Address.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/View_Business_Travelling.html) -->
  ~ Version 1.0<br>
 Created: 16 July 2024<br>
 Updated: 16 July 2024<br>
@@ -12216,3 +13949,5 @@ Updated: 16 July 2024<br>
 **Related Articles**
 - [Data Level Structure](Data_Level_Structure.md)
 - [User Type Default Access](User_Types_Default_Access.md)
+
+<!-- [Link Text](https://salesconnection.github.io/Sales-Connection-Support/Wizard_Page.html) -->

@@ -1,10 +1,10 @@
 import { config } from "dotenv";
 import { Document } from "langchain/document";
-import { OpenAIEmbeddings } from "langchain/embeddings/openai";
-import { OpenAI } from "langchain/llms/openai";
+import { OpenAIEmbeddings } from "@langchain/openai";
+import { OpenAI } from "@langchain/openai";
 import * as fs from "fs";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
-import { HNSWLib } from "langchain/vectorstores/hnswlib";
+import { HNSWLib } from "@langchain/community/vectorstores/hnswlib";
 config();
 
 const model = new OpenAI({

@@ -18,7 +18,7 @@ const readlineInterface = createInterface({
 const getUserInput = (query) => {
   return new Promise(resolve => readlineInterface.question(query, resolve));
 };
-const question = await getUserInput("Enter your question: ");
+const question = "如何更改我的密码"
 
 
 //Template
@@ -63,7 +63,7 @@ const context = await retriever;
 const result = await ragChain.invoke({
   question: question,
   context,
-});
+}); 
 
 console.log(result);
 readlineInterface.close();
