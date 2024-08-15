@@ -13,6 +13,13 @@
         #input {
             width: 100%;
         }
+        .error {
+            color: red;
+        }
+        .debug {
+            color: gray;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -21,43 +28,80 @@
     <script>
         const chatbox = document.getElementById('chatbox');
         const input = document.getElementById('input');
-    
+        let sessionId = 100;
+        const SERVER_URL = 'http://localhost:8000';
+        const CONFIG_ID = 'config1';  // Added config id
+
+        function addMessage(type, message) {
+            const div = document.createElement('div');
+            div.className = type;
+            div.textContent = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${message}`;
+            chatbox.appendChild(div);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function testServerConnectivity() {
+            addMessage('debug', 'Testing server connectivity...');
+            fetch(SERVER_URL)
+                .then(response => {
+                    if (response.ok) {
+                        addMessage('debug', 'Successfully connected to server');
+                        return response.text();
+                    } else {
+                        throw new Error(`Server responded with status: ${response.status}`);
+                    }
+                })
+                .then(text => addMessage('debug', `Server response: ${text}`))
+                .catch(error => {
+                    addMessage('error', `Could not connect to server: ${error.message}`);
+                    console.error('Connectivity test error:', error);
+                });
+        }
+
         input.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 let message = this.value;
                 this.value = '';
-    
-                chatbox.innerHTML += `<div>User: ${message}</div>`;
-                chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
-    
-                fetch('http://localhost:8000/sendMessage', {
+
+                addMessage('user', message);
+                addMessage('debug', 'Sending request to server...');
+
+                fetch(`${SERVER_URL}/api/message`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ message: message }),
+                    body: JSON.stringify({ 
+                        sessionId: sessionId || 'new-session', 
+                        text: message,
+                        config: CONFIG_ID  // Added config id to the request body
+                    }),
                 })
                 .then(response => {
+                    addMessage('debug', `Server responded with status: ${response.status}`);
                     if (response.ok) {
                         return response.json();
                     } else {
-                        throw new Error('Server response was not OK.');
+                        throw new Error(`Server responded with status: ${response.status}`);
                     }
                 })
                 .then(data => {
-                    chatbox.innerHTML += `<div>Bot: ${data.reply}</div>`;
-                    chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
+                    sessionId = data.sessionId;
+                    addMessage('bot', data.text);
                 })
                 .catch((error) => {
                     console.error('Error:', error);
-                    chatbox.innerHTML += `<div>Error: Could not get response</div>`;
+                    addMessage('error', `Error: ${error.message}`);
+                    addMessage('debug', 'Check the console for more details');
                 })
                 .finally(() => {
-                    input.focus(); // Refocus on the input field
+                    input.focus();
                 });
             }
         });
+
+        // Test server connectivity on page load
+        testServerConnectivity();
     </script>
 </body>
 </html>
-
