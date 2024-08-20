@@ -44,11 +44,11 @@ app.post('/api/message', async (req, res) => {
   const sessionId = req.body.sessionId; 
   const inputText = req.body.text;
   const configId = req.body.config;
-  
+
   if (!sessionData[sessionId]) {
     sessionData[sessionId] = { messages: [], timestamp: Date.now(), messageCount: 0 };
   }
-
+  
   const session = sessionData[sessionId];
   const currentTime = Date.now();
 
